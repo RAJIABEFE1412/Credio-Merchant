@@ -1,0 +1,65 @@
+.deposit{
+    width: 100%;
+}
+.deposit-title{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.back svg{
+    font-size: 30px;
+}
+.deposit-text{
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: #B11226;
+}
+.deposit-action{
+    margin-top: 30px;
+    width: 100%;
+}
+.crediometer, .by-card{
+    width: 100%;
+    height: 120px;
+    padding: 30px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.07);
+}
+.credio-logo{
+    width: 95px;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #B11226;
+    border-radius: 6px;
+}
+.credio-logo svg{
+    font-size: 35px;
+    color: #ffff;
+}
+.credio-text{
+    margin-left: 30px;
+}
+.action-name{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #383838;
+}
+.action-details{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #A9A8A8;
+}

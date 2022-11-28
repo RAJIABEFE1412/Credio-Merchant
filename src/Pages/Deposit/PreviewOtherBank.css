@@ -1,0 +1,20 @@
+.preview{
+    width: 80%;
+}
+.preview-1{
+    margin-top: 20px;
+}
+.receipt-head, .receipt-body{
+    text-align: left;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.receipt-body{
+    text-align: right;
+}
+.preview-submit{
+    margin-top: 100px;
+}

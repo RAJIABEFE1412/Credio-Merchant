@@ -1,0 +1,51 @@
+.bycredio{
+    width: 100%;
+}
+.bycredio-body{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.bycredio-body form{
+    width: 80%;
+}
+.form-1{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.form-left, .form-right{
+    width: 45%;
+}
+.form-submit{
+    margin-top: 30px;
+}
+.form-submit-left, .form-submit-right{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+.submit-1{
+    width: 75%;
+    height: 75px;
+    background-color: transparent;
+    border: 1px solid #B11226;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    color: #B11226;
+}
+.submit-2, .form-submit-right a{
+    width: 75%;
+    height: 75px;
+    background-color: #B11226;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    color: #ffff; 
+}

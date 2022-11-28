@@ -1,0 +1,62 @@
+.sidebar{
+    position: fixed;
+    width: 280px;
+    height: 89.9vh;
+    background-color:  #FFF9F9;
+}
+.links{
+    margin-top: 100px;
+    width: 100%;
+    padding-left: 35px;
+}
+.links nav{
+    list-style: none;
+}
+.links nav li{
+    display: flex;
+    margin-top: 10px;
+    padding: 20px;
+    transition: all 0.4s;
+}
+.links nav li:hover{
+    background: rgba(175, 19, 46, 0.06);
+    border-radius: 10px 0px 0px 10px;
+    border-right: 4px solid #B11226;
+    padding: 20px;
+    color: rgba(177, 18, 38, 0.74);
+    transition: all 0.4s;
+}
+.links nav li a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #777777;
+}
+.links nav li a:hover{
+    
+}
+.sideicon-inner svg{
+    font-size: 20px;
+    color: #777777;
+}
+.address-name{
+    margin-left: 14px;
+}
+.logout{
+    padding: 20px;
+    margin-top: 150px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.logout-name{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #D50000;
+}
