@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import {BsArrowLeft} from 'react-icons/bs';
 import InputField from '../../Components/Input/InputField';
+import AmountField from '../../Components/Input/AmountField';
 import { useState } from 'react';
 import Modal from '../../Components/Modal/Modal';
 import './ByOtherBank.css';
@@ -42,7 +43,7 @@ const ByOtherBank = () => {
                     </div>
                     <div className="form-1">
                         <div className="form-left">
-                            <InputField
+                            <AmountField
                                 label="Amount"
                                 type="number"
                                 placeholder='Amount'

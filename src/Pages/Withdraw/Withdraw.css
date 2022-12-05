@@ -1,0 +1,12 @@
+.withdraw-body{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.withdraw-body form{
+    width: 80%;
+}
+.withdraw-submit{
+    margin-top: 100px;
+}

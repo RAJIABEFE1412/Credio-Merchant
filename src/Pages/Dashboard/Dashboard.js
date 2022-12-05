@@ -25,10 +25,12 @@ const Dashboard = () => {
             <div className="action">
                 <p className="action-text">Actions</p>
                 <div className="action-button">
-                    <div className="actions withdraw">
-                        <TfiWallet/>
-                        <p className="withdraw-text">Withdraw</p>
-                    </div>
+                    <Link to='/withdraw'>
+                        <div className="actions withdraw-btn">
+                            <TfiWallet/>
+                            <p className="withdraw-text">Withdraw</p>
+                        </div>
+                    </Link>
                     <Link to="/savings">
                         <div className="actions saving-btn">
                             <RiLuggageDepositLine/>
@@ -45,10 +47,12 @@ const Dashboard = () => {
                         <TbCashBanknoteOff/>
                         <p className="cashless-text">Cashless</p>
                     </div>
-                    <div className="actions openaccount">
-                        <BiUserPlus/>
-                        <p className="openaccount-text">Open Account</p>
-                    </div>
+                    <Link to="/openaccount">
+                        <div className="actions openaccount">
+                            <BiUserPlus/>
+                            <p className="openaccount-text">Open Account</p>
+                        </div>
+                    </Link>
                     <div className="actions more">
                         <BiDotsVerticalRounded/>
                         <p className="more-text">More</p>
@@ -58,7 +62,9 @@ const Dashboard = () => {
             <div className="transaction">
                 <p className="transaction-head">Transaction</p>
                 <div className="transaction-table">
-                    <DashboardTable/>
+                    <Link to='/transaction'>
+                        <DashboardTable/>
+                    </Link>
                 </div>
             </div>
         </div>

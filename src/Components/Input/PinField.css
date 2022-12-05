@@ -1,0 +1,18 @@
+.pinfield input{
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    margin: 2px;
+    background-color: #D6DEE0;
+    color: #000000;
+    outline: none;
+    transition: all 0.1s;
+}
+.pinfield input:focus{
+    background-color: #F1C37E;
+}

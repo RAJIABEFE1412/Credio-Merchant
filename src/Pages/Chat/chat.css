@@ -1,0 +1,43 @@
+.chat-header{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    color: #000000;
+}
+.chat-body{
+    display: flex;
+}
+.chat-left{
+    width: 25%;
+}
+.chat-right{
+
+    width: 75%;
+}
+.chat-search{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #E0E0E0;
+    padding: 10px;
+    border-radius: 8px;
+}
+.chat-search svg{
+    font-size: 12px;
+    font-weight: thin;
+    color: #454545DE;
+}
+.chat-search input{
+    margin-left: 10px;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.chat-search input::placeholder{
+    color: #454545DE;
+}
+.chat-message{
+    margin-top: 10px;
+}

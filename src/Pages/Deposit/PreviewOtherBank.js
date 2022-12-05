@@ -9,7 +9,7 @@ const PreviewOtherBank = () => {
         <div className="previewotherbank">
             <div className="deposit-title">
                 <div className="back">
-                    <Link to='/deposit'>
+                    <Link to='/bybank'>
                         <BsArrowLeft />
                     </Link>
                 </div>

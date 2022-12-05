@@ -1,0 +1,13 @@
+.accountdetails{
+    width: 100%;
+}
+.here-details{
+    text-align: left;
+}
+.account-details-container{
+    display: flex;
+    justify-content: center;
+}
+.account-details-outer{
+    width: 80%;
+}

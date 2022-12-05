@@ -7,7 +7,7 @@ const Saving = () => {
         <div className="saving">
             <div className="deposit-title">
                 <div className="back">
-                    <Link to='/deposit'>
+                    <Link to='/'>
                         <BsArrowLeft />
                     </Link>
                 </div>

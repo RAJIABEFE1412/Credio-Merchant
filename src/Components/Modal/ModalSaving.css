@@ -1,0 +1,31 @@
+.modal-container-inner{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.successful-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    border: none;
+    border-radius: 50%;
+    background-color: #67CE87;
+    color: whitesmoke;
+}
+.successful-icon svg{
+    font-size: 30px;
+}
+.successful-word{
+    margin-top: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    color: #383838;
+}

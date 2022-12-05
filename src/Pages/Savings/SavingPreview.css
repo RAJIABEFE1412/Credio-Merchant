@@ -1,0 +1,9 @@
+.saving-preview-body{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 100px;
+}
+.saving-preview-body-inner{
+    width: 80%;
+}

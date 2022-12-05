@@ -1,0 +1,22 @@
+.cardpin-body{
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.cardpin-body-inner{
+    width: 50%;
+}
+.enter-pin{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #000000;
+}
+.field-container{
+    margin-top: 20px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+}

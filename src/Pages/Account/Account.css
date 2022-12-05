@@ -1,0 +1,20 @@
+.account-body{
+    width: 100%;
+}
+.account-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.account-image img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.account-body-inner{
+    display: flex;
+    justify-content: center;
+}
+.account-body form{
+    width: 80%;
+}

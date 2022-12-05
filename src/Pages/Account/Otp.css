@@ -1,0 +1,30 @@
+.how-save span{
+    color: #B11226;
+}
+.otp-body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.otp-body-inner{
+    width: 80%;
+}
+.receive-code{
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    color: #707070;
+}
+.resend-code{
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    color: #982C31;
+}
+.otp-submit{
+    margin-top: 100px;
+}

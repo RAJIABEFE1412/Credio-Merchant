@@ -3,7 +3,7 @@ import {FaStore, FaPeopleArrows} from 'react-icons/fa'
 export const SidebarDetails = [
     {
         title:"Dashboard",
-        icon:<BiHome/>,
+        icon:<BiHome/>, 
         link:"/"
     },
     {

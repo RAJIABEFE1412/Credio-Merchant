@@ -1,0 +1,31 @@
+.chatmessages-inner{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 20px;
+    border-bottom   : 0.5px solid rgba(0, 0, 0, 0.5);
+}
+.person-detail{
+    margin-left: 10px;
+}
+.person-image img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #982C31;
+}
+.person-name{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+}
+.last-seen{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    color: #383838;
+}

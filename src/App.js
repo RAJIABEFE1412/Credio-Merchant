@@ -10,6 +10,14 @@ import ByOtherBank from './Pages/Deposit/ByOtherBank';
 import PreviewOtherBank from './Pages/Deposit/PreviewOtherBank';
 import Saving from './Pages/Savings/Saving';
 import SavingPreview from './Pages/Savings/SavingPreview';
+import Withdraw from './Pages/Withdraw/Withdraw';
+import CardPin from './Pages/Withdraw/CardPin';
+import Account from './Pages/Account/Account';
+import Otp from './Pages/Account/Otp';
+import CheckingOtp from './Pages/Account/CheckingOtp';
+import AccountDetails from './Pages/Account/AccountDetails';
+import Transaction from './Pages/Transaction/Transaction';
+import Chat from './Pages/Chat/chat';
 
 function App() {
   return (
@@ -28,6 +36,14 @@ function App() {
               <Route exact path='/preview' element={<PreviewOtherBank/>}></Route>
               <Route exact path='/savings' element={<Saving/>}></Route>
               <Route exact path='/savingpreview' element={<SavingPreview/>}></Route>
+              <Route exact path='/withdraw' element={<Withdraw/>}></Route>
+              <Route exact path='/pin' element={<CardPin/>}></Route>
+              <Route exact path='/openaccount' element={<Account/>}></Route>
+              <Route exact path='/getotp' element={<Otp/>}></Route>
+              <Route exact path='/checking' element={<CheckingOtp/>}></Route>
+              <Route exact path='/accountdetails' element={<AccountDetails/>}></Route>
+              <Route exact path='/transaction' element={<Transaction/>}></Route>
+              <Route exact path='/people' element={<Chat/>}></Route>
             </Routes>
           </div>
         </div>
