@@ -1,0 +1,84 @@
+.profile-text{
+    width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    text-align: center;
+    font-weight: 500;
+    font-size: 28px;
+    color: #383838;
+}
+.profile-header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.profile-header-inner p{
+    margin-top: 13px;
+}
+.profile-image-con{
+    display: flex;
+    justify-content: center;
+}
+.profile-image{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 1.00945px solid #982C31;
+}
+.profile-edit{
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #982C31;
+}
+.profile-name{
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: #000000;
+}
+.profile-location{
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    color: #929292;
+}
+.profile-subbody{
+    margin-top: 40px;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.manage-icon-outer, .change-icon-outer, .invite-icon-outer{
+    display: flex;
+    justify-content: center;
+}
+.manage-icon, .change-icon, .invite-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;   
+    background: #982C31;
+    border-radius: 11px;
+}
+.manage-icon svg, .change-icon svg, .invite-icon svg{
+    color: white;
+    font-size: 25px;
+}
+.manage-text, .change-text, .invite-text{
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    letter-spacing: -0.36975px;
+    color: #383838;
+}

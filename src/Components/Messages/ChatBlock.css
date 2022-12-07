@@ -1,0 +1,132 @@
+.chatblock-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+.chatblock-details{
+    display: flex;
+    align-items: center;
+}
+.chatblock-image img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #982C31;
+}
+.chatblock-info{
+    margin-left: 20px;
+}
+.chatblock-name{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0.06em;
+    color: #383838;
+}
+.chatblock-last-seen{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    color: #383838;
+}
+.chatblock-remove{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9ECE0;
+}
+.chatblock-remove svg{
+    font-size: 30px;
+    color: #982C31;
+}
+.chatblock-body{
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 58vh;
+    overflow-y: auto;
+    overscroll-behavior-inline: contain;
+    margin-top: 20px;
+    width: 100%;
+}
+.chatblock-body::-webkit-scrollbar{
+    width: 5px;
+}
+.chatblock-body::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: rgba(128, 128, 128, 0.456);
+    border-radius: 5px;
+}
+.sender{
+    width: 60%;
+}
+.sender-image img, .receiver-image img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.sender-message-outer{
+    width: fit-content;
+}
+.sender-message{
+    background-color: #982C31;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+}
+.sender-message p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+}
+.send-time{
+  float: right;
+}
+.send-time p{
+    margin-top: 5px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: #982C31;
+}
+.receiver{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.receiver-message{
+    background-color: #FFF3E9;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 20px;
+}
+.receiver-message p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #383838;
+}
+.receive-time{
+    float: left;
+}
+.receive-time p{
+    font-family: 'SF Pro Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    color: #383838;
+}

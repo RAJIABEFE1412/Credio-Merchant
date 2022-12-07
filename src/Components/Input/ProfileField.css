@@ -1,0 +1,37 @@
+.profilefield{
+    margin-top: 20px;
+    padding: 20px;
+    border: 1.14325px solid #982C31;
+    border-radius: 11.4325px;
+}
+.profilefield label{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14.8623px;
+    letter-spacing: -0.342975px;
+    color: #929292;
+}
+.profilefield input{
+    background-color: transparent;
+    margin-top: 10px;
+    width: 100%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: -0.342975px;
+    color: #383838;
+    border: none;
+}
+.profilefield input:focus{
+    outline: none;
+}
+.profilefield input::placeholder{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: -0.342975px;
+    color: #383838;
+}

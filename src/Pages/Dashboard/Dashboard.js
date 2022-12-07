@@ -31,40 +31,24 @@ const Dashboard = () => {
                             <p className="withdraw-text">Withdraw</p>
                         </div>
                     </Link>
-                    <Link to="/savings">
-                        <div className="actions saving-btn">
-                            <RiLuggageDepositLine/>
-                            <p className="saving-text">Savings</p>
-                        </div>
-                    </Link>
                     <Link to="/deposit">
                         <div className="actions deposit2">
                             <MdOutlineSavings/>
                             <p className="deposit-text">Deposit</p>
                         </div>
                     </Link>
-                    <div className="actions cashless">
-                        <TbCashBanknoteOff/>
-                        <p className="cashless-text">Cashless</p>
-                    </div>
-                    <Link to="/openaccount">
-                        <div className="actions openaccount">
-                            <BiUserPlus/>
-                            <p className="openaccount-text">Open Account</p>
+                    <Link to="/cashless">
+                        <div className="actions cashless">
+                            <TbCashBanknoteOff/>
+                            <p className="cashless-text">Cashless</p>
                         </div>
                     </Link>
-                    <div className="actions more">
-                        <BiDotsVerticalRounded/>
-                        <p className="more-text">More</p>
-                    </div>
                 </div>
             </div>
             <div className="transaction">
                 <p className="transaction-head">Transaction</p>
                 <div className="transaction-table">
-                    <Link to='/transaction'>
-                        <DashboardTable/>
-                    </Link>
+                    <DashboardTable/>
                 </div>
             </div>
         </div>

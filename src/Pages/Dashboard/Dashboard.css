@@ -102,8 +102,10 @@
     background: linear-gradient(230.56deg, #5EFCE8 -151.34%, #736EFE 45.37%);
 }
 .transaction{
+    width: 100%;
     margin-top: 20px;
 }
 .transaction-table{
+    width: 100%;
     margin-top: 20px;
 }

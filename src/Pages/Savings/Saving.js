@@ -30,12 +30,12 @@ const Saving = () => {
                             placeholder='Account number'
                         />
                     </div>
-                    <div className="form-submit-right saving-submit">
+                    <div className="form-submit-right saving-submit withdraw-submit">
                         <Link to="/savingpreview">
                             <button
                                 type='submit'
                                 value="Continue"
-                                className='submit-2'
+                                className='submit-2 withdraw-submit-2'
                             >Continue</button>
                         </Link>
                     </div>

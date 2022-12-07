@@ -18,6 +18,8 @@ import CheckingOtp from './Pages/Account/CheckingOtp';
 import AccountDetails from './Pages/Account/AccountDetails';
 import Transaction from './Pages/Transaction/Transaction';
 import Chat from './Pages/Chat/chat';
+import Profile from './Pages/Profile/Profile';
+import ProfileForm from './Pages/Profile/ProfileForm';
 
 function App() {
   return (
@@ -34,7 +36,7 @@ function App() {
               <Route exact path='/bycard' element={<ByCard/>}></Route>
               <Route exact path='/bybank' element={<ByOtherBank/>}></Route>
               <Route exact path='/preview' element={<PreviewOtherBank/>}></Route>
-              <Route exact path='/savings' element={<Saving/>}></Route>
+              <Route exact path='/cashless' element={<Saving/>}></Route>
               <Route exact path='/savingpreview' element={<SavingPreview/>}></Route>
               <Route exact path='/withdraw' element={<Withdraw/>}></Route>
               <Route exact path='/pin' element={<CardPin/>}></Route>
@@ -44,6 +46,8 @@ function App() {
               <Route exact path='/accountdetails' element={<AccountDetails/>}></Route>
               <Route exact path='/transaction' element={<Transaction/>}></Route>
               <Route exact path='/people' element={<Chat/>}></Route>
+              <Route exact path='/profile' element={<Profile/>}></Route>
+              <Route exact path='/profileform' element={<ProfileForm/>}></Route>
             </Routes>
           </div>
         </div>

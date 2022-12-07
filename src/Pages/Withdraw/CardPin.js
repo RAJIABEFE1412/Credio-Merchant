@@ -18,19 +18,19 @@ const CardPin = () => {
             </div>
             <div className="cardpin-body">
                 <div className="cardpin-body-inner">
-                    <p className="enter-pin">please enter your card pin</p>
+                    <p className="enter-pin">Please Enter Your Card Pin</p>
                     <div className="field-container">
                         <div className="field-1">
-                            <PinField/>
+                            <PinField />
                         </div>
                         <div className="field-1">
                             <PinField/>
                         </div>
                         <div className="field-1">
-                            <PinField/>
+                            <PinField />
                         </div>
                         <div className="field-1">
-                            <PinField/>
+                            <PinField />
                         </div>
                     </div>
                     <div className="form-submit-right saving-submit withdraw-submit">

@@ -1,0 +1,26 @@
+.profileform-subbody{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.profileform-subbody-inner{
+    width: 60%;
+}
+.profileform-footer{
+    margin-top: 20px;
+    width: 100%;
+}
+.copy-icon{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FFDEC0;
+}
+.copy-icon svg{
+    font-size: 20px;
+    color:  #982C31;
+}

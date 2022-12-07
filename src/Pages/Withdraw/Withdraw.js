@@ -23,12 +23,12 @@ const Withdraw = () => {
                             placeholder="Amount"
                             />
                         </div>
-                        <div className="form-submit-right saving-submit withdraw-submit">
+                        <div className="form-submit-right withdraw-submit">
                             <Link to="/pin">
                                 <button
                                     type='submit'
                                     value="Continue"
-                                    className='submit-2'
+                                    className='submit-2 withdraw-submit-2'
                                 >Continue</button>
                             </Link>
                         </div>
