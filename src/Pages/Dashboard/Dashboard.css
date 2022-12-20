@@ -1,6 +1,9 @@
 .dashboard{
     width: 100%;
 }
+.dashboard-title{
+    display: none;
+}
 .vault{
     width: 100%;
 }
@@ -54,7 +57,9 @@
     width: 100%;
     margin-top: 30px;
 }
-
+.action-button-mobile{
+    display: none;
+}
 .action-button{
     margin-top: 21px    ;
     width: 100%;
@@ -105,7 +110,157 @@
     width: 100%;
     margin-top: 20px;
 }
+.transaction-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.transaction-top-mobile{
+    display: none;
+}
+.transaction-link{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    color: #982C31;
+}
 .transaction-table{
     width: 100%;
     margin-top: 20px;
+}
+.transaction-table-mobile{
+    display: none;
+}
+@media (max-width: 400px) {
+    .vault{
+        display: none;
+    }
+    .action-button{
+        display: none;
+    }
+    .transaction-table{
+        display: none;
+    }
+    .transaction-top{
+        display: none;
+    }
+    .dashboard-title{
+        display: block;
+        text-align: center;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 24px;
+        text-align: center;
+        text-transform: capitalize;
+        color: #383838;
+    }
+    .action-button-mobile{
+        margin-top: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .notification-circle-3{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 270px;
+        height: 270px;
+        border-radius: 50%;
+        background: #EBE4DD;
+        box-shadow: inset 5px 5px 10px #bab4af,
+            inset -5px -5px 10px #ffffff;
+    }
+    .notification-circle-2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        background-color: #EBE4DD;
+        box-shadow: inset 5px 5px 10px #bab4af,
+            inset -5px -5px 10px #ffffff;
+    }
+    .notification-circle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: #EBE4DD;
+        box-shadow:  13px 13px 26px #96928d ;
+    }
+    .notification-circle svg{
+        color: #982C31;
+        font-size: 30px;
+    }
+    .subbutton-circle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #EBE4DD;
+        box-shadow:  5px 5px 61px #94908b,
+             -5px -5px 61px #ffffff;
+    }
+    .subbutton-circle-inner{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .subbutton-circle-inner svg{
+        color: #982C31;
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .subbutton-circle-inner p{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        color: #982C31;
+    }
+    .deposit-circle{
+        position: absolute;
+        top: -30px;
+    }
+    .withdraw-circle{
+        position: absolute;
+        left: -30px;
+    }
+    .saving-circle{
+        position: absolute;
+        right: -30px;
+    }
+    .account-circle{
+        position: absolute;
+        bottom: -30px;
+    }
+    .transaction-top-mobile{
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .transaction-head-mobile{
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        color: #383838;
+    }
+    .transaction-table-mobile{
+        display: block;
+    }
 }

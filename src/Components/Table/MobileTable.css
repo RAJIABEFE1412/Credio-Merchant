@@ -1,0 +1,33 @@
+.mobiletable{
+    width: 100%;
+    padding: 20px;
+}
+.mobiletable-inner{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom:1px solid #C4C4C4;
+}
+.mobile-image img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #982C31;
+}
+.mobile-transaction{
+    margin-left: 20px;
+}
+.mobile-tran-name{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #383838;
+}
+.mobile-tran-status{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #9D9090;
+}

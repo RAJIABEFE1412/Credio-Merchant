@@ -28,9 +28,9 @@ const Deposit = () => (
                     </div>
                 </Link>
                 <Link to='/bycard'>
-                    <div className="by-card">
+                    <div className="crediometer">
                         <div className="credio-logo">
-                            <FiCreditCard />
+                            <FiCreditCard/>
                         </div>
                         <div className="credio-text">
                             <p className="action-name">By Card Number</p>
@@ -41,9 +41,9 @@ const Deposit = () => (
                 <Link to='/bybank'>
                     <div className="crediometer">
                         <div className="credio-logo">
-                            <BsBank2 />
+                            <BsBank2/>
                         </div>
-                        <div className="credio-text">
+                        <div className="credio-text credio-text-2">
                             <p className="action-name">Other banks</p>
                             <p className="action-details">Deposit to a selected bank account</p>
                         </div>

@@ -4,6 +4,8 @@ import AmountField from '../../Components/Input/AmountField';
 import Modal from '../../Components/Modal/Modal';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './ByCard.css';
+import ProfileField from '../../Components/Input/ProfileField';
 const ByCard = () => {
     const [openModal, setOpenModal] = useState(false);
     return ( 
@@ -17,7 +19,7 @@ const ByCard = () => {
                 <p className="deposit-text">Card Number Deposit</p>
             </div>
             <div className="bycredio-body">
-                <form>
+                <form className='bycard-form'>
                     <div className="form-1">
                         <div className="form-left">
                             <InputField
@@ -73,6 +75,44 @@ const ByCard = () => {
                                 className='submit-2'
                             >Continue</button>
                             {openModal && <Modal closeModal={setOpenModal}/>}
+                        </div>
+                    </div>
+                </form>
+                <form action="" className="bycard-form-mobile">
+                    <div className="form-2">
+                        <ProfileField
+                            label="Card Number"
+                            type="text"
+                        />
+                    </div>
+                    <div className="form-2">
+                        <ProfileField
+                            label="Card Holder’s Name"
+                            type="text"
+                        />
+                    </div>
+                    <div className="form-2">
+                        <ProfileField
+                            label="Account"
+                            type="tel"
+                        />
+                    </div>
+                    <div className="form-1 form-submit">
+                        <div className="form-submit-left">
+                            <input
+                                type='submit'
+                                value="Cancle"
+                                className='submit-1'
+                            ></input>
+                        </div>
+                        <div className="form-submit-right">
+                            <Link to='/bycardsender'>
+                                <button
+                                    type='submit'
+                                    value="Continue"
+                                    className='submit-2'
+                                >Continue</button>
+                            </Link>
                         </div>
                     </div>
                 </form>

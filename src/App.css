@@ -23,3 +23,15 @@ body{
 a{
   text-decoration: none;
 }
+@media (max-width: 400px) {
+  body{
+    background-color: #F9ECE0;
+  }
+  .app-container{
+    padding-top: 30px;
+  }
+  .body{
+    padding: 0px;
+    margin-left: 0px;
+  }
+}

@@ -1,0 +1,11 @@
+.bycard-form-mobile{
+    display: none;
+}
+@media (max-width: 400px){
+    .bycard-form{
+        display: none;
+    }
+    .bycard-form-mobile{
+        display: block;
+    }
+}

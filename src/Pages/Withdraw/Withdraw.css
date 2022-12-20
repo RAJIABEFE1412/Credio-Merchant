@@ -7,10 +7,39 @@
 .withdraw-body form{
     width: 80%;
 }
+.withdraw-form-mobile{
+    display: none;
+}
 .withdraw-submit{
     width: 100%;
     margin-top: 100px;
 }
 .withdraw-submit-2, .withdraw-submit a{
     width: 100%;
+}
+@media (max-width: 400px){
+    .how-save{
+        margin-left: 20px;
+        text-align: left;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 17px;
+        color: #000000;
+    }
+    .withdraw-body{
+        margin-top: 20px;
+    }
+    .withdraw-body form{
+        width: 90%;
+    }
+    .withdraw-form-mobile{
+        display: block;
+    }
+    .withdraw-form{
+        display: none;
+    }
+    .withdraw-submit{
+        margin-top: 340px;
+    }
 }

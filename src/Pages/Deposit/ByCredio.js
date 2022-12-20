@@ -18,7 +18,7 @@ const ByCredio = () => {
                 <p className="deposit-text">Deposit to crediometer</p>
             </div>
             <div className="bycredio-body">
-                <form>
+                <form className='credio-form'>
                     <div className="form-1">
                         <div className="form-left">
                             <InputField
@@ -76,6 +76,9 @@ const ByCredio = () => {
                             {openModal && <Modal closeModal={setOpenModal}/>}
                         </div>
                     </div>
+                </form>
+                <form className='credio-form-mobile '>
+                    
                 </form>
             </div>
             

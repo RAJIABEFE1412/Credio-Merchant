@@ -20,6 +20,7 @@ import Transaction from './Pages/Transaction/Transaction';
 import Chat from './Pages/Chat/chat';
 import Profile from './Pages/Profile/Profile';
 import ProfileForm from './Pages/Profile/ProfileForm';
+import ByCardSender from './Pages/Deposit/ByCardSender.js';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
               <Route exact path='/deposit' element={<Deposit/>}></Route>
               <Route exact path='/bycredio' element={<ByCredio/>}></Route>
               <Route exact path='/bycard' element={<ByCard/>}></Route>
+              <Route exact path='/bycardsender' element={<ByCardSender/>}></Route>
               <Route exact path='/bybank' element={<ByOtherBank/>}></Route>
               <Route exact path='/preview' element={<PreviewOtherBank/>}></Route>
               <Route exact path='/cashless' element={<Saving/>}></Route>

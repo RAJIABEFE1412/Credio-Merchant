@@ -50,3 +50,18 @@
     font-size: 30px;
     color: #ffff; 
 }
+@media (max-width: 400px){
+    .bycredio-body{
+        margin-top: 10px;
+    }
+    .bycredio-body form{
+        width: 90%;
+    }
+    .form-submit{
+        margin-top: 200px;
+    }
+    .submit-2, .submit-1, .form-submit-right a{
+        width: 100%;
+        font-size: 20px;
+    }
+}
