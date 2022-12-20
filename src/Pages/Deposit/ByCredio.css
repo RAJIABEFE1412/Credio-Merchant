@@ -50,7 +50,7 @@
     font-size: 30px;
     color: #ffff; 
 }
-@media (max-width: 400px){
+@media (Max-width: 500px){
     .bycredio-body{
         margin-top: 10px;
     }

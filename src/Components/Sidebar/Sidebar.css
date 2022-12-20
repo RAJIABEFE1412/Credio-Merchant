@@ -60,7 +60,7 @@
     font-size: 18px;
     color: #D50000;
 }
-@media (max-width: 400px) {
+@media (Max-width: 500px) {
     .sidebar{
         display: none;
     } 

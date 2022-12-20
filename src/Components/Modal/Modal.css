@@ -92,7 +92,7 @@
     border: none;
     border-radius: 9px;
 }
-@media (max-width: 400px) {
+@media (Max-width: 500px) {
     .modal-container{
         width: 90%;
     }

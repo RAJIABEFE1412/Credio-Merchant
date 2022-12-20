@@ -20,7 +20,7 @@
     display: flex;
     justify-content: space-between;
 }
-@media (max-width: 400px){
+@media (Max-width: 500px){
     .cardpin-body{
         margin-top: 30px;
     }

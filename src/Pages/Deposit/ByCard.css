@@ -1,7 +1,7 @@
 .bycard-form-mobile{
     display: none;
 }
-@media (max-width: 400px){
+@media (Max-width: 500px){
     .bycard-form{
         display: none;
     }

@@ -17,7 +17,7 @@
 .withdraw-submit-2, .withdraw-submit a{
     width: 100%;
 }
-@media (max-width: 400px){
+@media (Max-width: 500px){
     .how-save{
         margin-left: 20px;
         text-align: left;

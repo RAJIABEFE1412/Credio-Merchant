@@ -23,7 +23,7 @@ body{
 a{
   text-decoration: none;
 }
-@media (max-width: 400px) {
+@media (Max-width: 500px) {
   body{
     background-color: #F9ECE0;
   }
