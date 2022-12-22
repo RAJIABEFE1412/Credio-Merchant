@@ -4,11 +4,15 @@ const AmountField = (props) => {
        <div className="amountfield">
             <label>{props.label}</label><br></br>
             <div className="amountfield-inner">
-                <input
-                    type={props.type}
-                    placeholder={props.placeholder}
-                >
-                </input>
+                <div className="inputbox">
+                    <input
+                        type={props.type}
+                        // placeholder={props.placeholder}
+                        required
+                    >
+                    </input>
+                    <span>Amount</span>
+                </div>
                 <div className="ngn"><p>NGN</p></div>
             </div>
        </div>

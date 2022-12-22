@@ -65,9 +65,6 @@
     color: #A9A8A8;
 }
 @media (Max-width: 500px){
-    .deposit-title{
-        padding: 20px;
-    }
     .deposit-text{
         font-family: 'Roboto';
         font-style: normal;
@@ -76,7 +73,6 @@
         color: #383838;
     }
     .action-text{
-        margin-left: 20px;
         font-family: 'Roboto';
         font-style: normal;
         font-weight: 600;

@@ -4,6 +4,7 @@ import {BsFillBellFill, BsUpload} from 'react-icons/bs'
 import {AiFillEyeInvisible} from 'react-icons/ai';
 import {FaUserCircle} from 'react-icons/fa'
 import {RiCoinsFill} from 'react-icons/ri';
+import {HiBellAlert} from 'react-icons/hi2'
 import {TfiWallet} from 'react-icons/tfi';
 import {RiLuggageDepositLine} from 'react-icons/ri'
 import {MdOutlineSavings} from 'react-icons/md'
@@ -14,7 +15,20 @@ import MobileTable from '../../Components/Table/MobileTable';
 const Dashboard = () => {
     return ( 
         <div className="dashboard">
-            <p className="dashboard-title">Cred Agent</p>
+            <div className="notification-mobile">
+                <div className="notification-mobile-left">
+                    <div className="user-square">
+
+                    </div>
+                    <div className="user-details">
+                        <p className="greeting-notification">Good Day</p>
+                        <p className="business-name">TourEarth</p>
+                    </div>
+                </div>
+                <div className="notification-mobile-right">
+                    <HiBellAlert/>
+                </div>
+            </div>
             <div className="vault">
                 <p className="vault-text">Vault</p>
                 <div className="vault-card">
@@ -29,45 +43,6 @@ const Dashboard = () => {
             </div>
             <div className="action">
                 <p className="action-text">Actions</p>
-                <div className="action-button-mobile">
-                    <div className="action-button-mobile-inner">
-                        <div className="notification-circle-3">
-                            <div className="notification-circle-2">
-                                <div className="notification-circle">
-                                    <BsFillBellFill/>
-                                </div>
-                            </div>
-                            <div className="subbutton-circle deposit-circle">
-                                <Link to='/deposit'>
-                                    <div className="subbutton-circle-inner">
-                                        <BsUpload/>
-                                        <p>Deposit</p>
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="subbutton-circle withdraw-circle">
-                                <Link to='/withdraw '>
-                                    <div className="subbutton-circle-inner">
-                                        <BsUpload/>
-                                        <p>Withdraw</p>
-                                    </div>
-                                </Link>
-                            </div>
-                            <div className="subbutton-circle saving-circle">
-                                <div className="subbutton-circle-inner">
-                                    <RiCoinsFill/>
-                                    <p>Savings</p>
-                                </div>
-                            </div>
-                            <div className="subbutton-circle account-circle">
-                                <div className="subbutton-circle-inner">
-                                    <FaUserCircle/>
-                                    <p>Account</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div className="action-button">
                     <Link to='/withdraw'>
                         <div className="actions withdraw-btn">
@@ -75,10 +50,16 @@ const Dashboard = () => {
                             <p className="withdraw-text">Withdraw</p>
                         </div>
                     </Link>
-                    <Link to="/deposit">
+                    <Link to="/bybank">
                         <div className="actions deposit2">
                             <MdOutlineSavings/>
                             <p className="deposit-text">Deposit</p>
+                        </div>
+                    </Link>
+                    <Link to="/cashless">
+                        <div className="actions credio-btn">
+                            <TbCashBanknoteOff/>
+                            <p className="cashless-text">Credio</p>
                         </div>
                     </Link>
                     <Link to="/cashless">
@@ -90,17 +71,13 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className="transaction">
-                <div className="transaction-top-mobile">
-                    <p className="transaction-head-mobile">Transaction History</p>
-                    <p className='transaction-link'>See All</p>
-                </div>
                 <div className="transaction-top">
-                    <p className="transaction-head">Transaction</p>
+                    <p className="transaction-head">Transaction History</p>
                     <Link to='/transaction'> <p className='transaction-link'>See All</p></Link>
                 </div>
-                <div className="transaction-table">
+                {/* <div className="transaction-table">
                     <DashboardTable/>
-                </div>
+                </div> */}
                 <div className="transaction-table-mobile">
                     <MobileTable/>
                 </div>

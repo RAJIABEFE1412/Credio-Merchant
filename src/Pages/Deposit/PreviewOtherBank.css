@@ -1,20 +1,51 @@
 .preview{
     width: 80%;
 }
+.receiver-details{
+    width: 100%;
+    padding: 10px;
+    background-color: antiquewhite;
+}
 .preview-1{
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
 }
-.receipt-head, .receipt-body{
-    text-align: left;
+.preview-upper{
+    margin-top: 0px;
+}
+.preview-left, .preview-right{
+    width: 45%;
+}
+.preview-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.receipt-head{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 18px;
+    color: rgb(96, 96, 96);
+    text-transform: uppercase;
+}
+.receipt-body{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
     color: rgba(0, 0, 0, 0.8);
 }
 .receipt-body{
-    text-align: right;
+
 }
 .preview-submit{
     margin-top: 100px;
+}
+@media (max-width: 500px) {
+    .preview{
+        width: 100%;
+    }
 }

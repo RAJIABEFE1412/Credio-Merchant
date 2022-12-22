@@ -23,12 +23,15 @@ body{
 a{
   text-decoration: none;
 }
+input{
+  outline: none;
+}
 @media (Max-width: 500px) {
   body{
-    background-color: #F9ECE0;
+    background-color: white;
   }
   .app-container{
-    padding-top: 30px;
+    padding: 20px;
   }
   .body{
     padding: 0px;

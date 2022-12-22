@@ -26,7 +26,7 @@ const ByOtherBank = () => {
                              className='bank-select'
                             > 
                                 <optgroup>
-                                    <option>Credio bank</option>
+                                    <option>Bank Name</option>
                                     <option>First bank</option>
                                     <option>Sterling bank</option>
                                     <option>Eco bank</option>
@@ -42,6 +42,13 @@ const ByOtherBank = () => {
                         </div>
                     </div>
                     <div className="form-1">
+                          <div className="form-right">
+                            <InputField
+                                label="Account Holder's Name"
+                                type="text"
+                                placeholder='Account Name'
+                            />
+                        </div>
                         <div className="form-left">
                             <AmountField
                                 label="Amount"
@@ -49,13 +56,7 @@ const ByOtherBank = () => {
                                 placeholder='Amount'
                             />
                         </div>
-                        <div className="form-right">
-                            <InputField
-                                label="Account Holder's Name"
-                                type="text"
-                                placeholder='John'
-                            />
-                        </div>
+                      
                     </div>
                     <div className="form-2">
                         <InputField
@@ -64,7 +65,7 @@ const ByOtherBank = () => {
                             placeholder='Make a Comment'
                         />
                     </div>
-                    <div className="form-1 form-submit">
+                    <div className="form-submit">
                         <div className="form-submit-left">
                             <input
                                 type='submit'

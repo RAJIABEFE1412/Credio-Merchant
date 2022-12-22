@@ -18,6 +18,8 @@
     width: 45%;
 }
 .form-submit{
+    display: flex;
+    justify-content: space-between;
     margin-top: 30px;
 }
 .form-submit-left, .form-submit-right{
@@ -57,8 +59,14 @@
     .bycredio-body form{
         width: 90%;
     }
+    .form-1{
+        flex-direction: column;
+    }
+    .form-left, .form-right{
+        width: 100%;
+    }
     .form-submit{
-        margin-top: 200px;
+        margin-top: 40px;
     }
     .submit-2, .submit-1, .form-submit-right a{
         width: 100%;

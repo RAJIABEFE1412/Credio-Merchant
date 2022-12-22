@@ -19,17 +19,17 @@ const Withdraw = () => {
                     <form >
                         <div className="form-2 withdraw-form">
                             <AmountField
-                            label="Withdrawal Amount"
-                            type= 'number'
+                            // label="Withdrawal Amount"
+                            type= 'text'
                             placeholder="Amount"
                             />
                         </div>
-                        <div className="form-2 withdraw-form-mobile">
+                        {/* <div className="form-2 withdraw-form-mobile">
                             <ProfileField
                             label="Amount"
                             type= 'number'
                             />
-                        </div>
+                        </div> */}
                         <div className="form-submit-right withdraw-submit">
                             <Link to="/pin">
                                 <button

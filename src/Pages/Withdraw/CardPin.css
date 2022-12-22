@@ -28,6 +28,7 @@
         width: 90%;
     }
     .enter-pin{
+        text-align: center;
         font-weight: 700;
         font-size: 17px;  
     }

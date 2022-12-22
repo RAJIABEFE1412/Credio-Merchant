@@ -29,3 +29,11 @@
     font-size: 24px;
     color: rgba(0, 0, 0, 0.8);
 }
+@media (max-width: 500px) {
+    .select-label{
+        display: none;
+    }
+    .bank-select{
+        border: 1px solid #982C31;
+    }
+}
