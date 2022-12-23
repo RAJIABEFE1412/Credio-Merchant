@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import {BsArrowLeft} from 'react-icons/bs';
 import InputField from "../../Components/Input/InputField";
 import "./Saving.css";
+import AmountField from "../../Components/Input/AmountField";
 const Saving = () => {
     return ( 
         <div className="saving">
@@ -24,10 +25,10 @@ const Saving = () => {
                         />
                     </div>
                     <div className="form-2">
-                        <InputField
-                            label="Account to Debit"
-                            type="tel"
-                            placeholder='Account number'
+                        <AmountField
+                            label="Amount"
+                            type="text"
+                            placeholder='0.00'
                         />
                     </div>
                     <div className="form-submit-right saving-submit withdraw-submit">

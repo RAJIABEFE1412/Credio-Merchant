@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import {BsArrowLeft} from 'react-icons/bs';
 import "./Transaction.css";
 import DashboardTable from '../../Components/Table/DashboardTable';
+import MobileTable from '../../Components/Table/MobileTable';
 const Transaction = () => {
     return ( 
         <div className="transaction">
@@ -16,20 +17,11 @@ const Transaction = () => {
             <div className="transaction-body">
                 <div className="transaction-header">
                     <div className="tran-history">
-                        <p>Transactions History</p>
-                    </div>
-                    <div className="tran-sort">
-                        <div className="sort-by">
-                            <select>
-                                <optgroup>
-                                    <option>Sort By</option>
-                                </optgroup>
-                            </select>
-                        </div>
+                        <p>All Transaction history</p>
                     </div>
                 </div>
                 <div className="transaction-table">
-                    <DashboardTable/>
+                    <MobileTable/>
                 </div>
             </div>
         </div>

@@ -5,13 +5,14 @@ import Modal from '../../Components/Modal/Modal';
 import { useState } from 'react';
 import './ByCredio.css';
 import { Link } from 'react-router-dom';
+import TextField from '../../Components/Input/TextField';
 const ByCredio = () => {
     const [openModal, setOpenModal] = useState(false);
     return ( 
         <div className="bycredio">
             <div className="deposit-title">
                 <div className="back">
-                    <Link to='/deposit'>
+                    <Link to='/'>
                         <BsArrowLeft />
                     </Link>
                 </div>
@@ -36,49 +37,37 @@ const ByCredio = () => {
                         </div>
                     </div>
                     <div className="form-2">
-                        <InputField
-                            label="Account to credit"
-                            type="tel"
-                            placeholder='Account number'
-                        />
-                    </div>
-                    <div className="form-1">
-                        <div className="form-left">
                             <AmountField
                                 label="Amount"
                                 type="number"
                                 placeholder='Amount'
                             />
-                        </div>
-                        <div className="form-right">
-                            <InputField
-                                label="Comment"
-                                type="text"
-                                placeholder='Make a comment'
-                            />
-                        </div>
                     </div>
-                    <div className="form-1 form-submit">
+                    <div className="form-2">
+                        <TextField
+                            label="Comment"
+                            type="text"
+                            placeholder='Make a comment'
+                        />
+                    </div>
+                    <div className="form-submit">
                         <div className="form-submit-left">
                             <input
                                 type='submit'
-                                value="Cancle"
+                                value="Cancel"
                                 className='submit-1'
                             ></input>
                         </div>
                         <div className="form-submit-right">
-                            <button
-                                onClick={()=> setOpenModal(true)}
-                                type='submit'
-                                value="Continue"
-                                className='submit-2'
-                            >Continue</button>
-                            {openModal && <Modal closeModal={setOpenModal}/>}
+                            <Link to='/previewcredio'>
+                                <button
+                                    type='submit'
+                                    value="Continue"
+                                    className='submit-2'
+                                >Continue</button>
+                            </Link>
                         </div>
                     </div>
-                </form>
-                <form className='credio-form-mobile '>
-                    
                 </form>
             </div>
             

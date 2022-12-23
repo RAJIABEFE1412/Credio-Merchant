@@ -5,13 +5,14 @@ import AmountField from '../../Components/Input/AmountField';
 import { useState } from 'react';
 import Modal from '../../Components/Modal/Modal';
 import './ByOtherBank.css';
+import TextField from '../../Components/Input/TextField';
 const ByOtherBank = () => {
     // const [openModal, setOpenModal] = useState(false);
     return ( 
         <div className="byotherbank">
             <div className="deposit-title">
                 <div className="back">
-                    <Link to='/deposit'>
+                    <Link to='/'>
                         <BsArrowLeft />
                     </Link>
                 </div>
@@ -59,7 +60,7 @@ const ByOtherBank = () => {
                       
                     </div>
                     <div className="form-2">
-                        <InputField
+                        <TextField
                             label="Comment"
                             type="text"
                             placeholder='Make a Comment'
@@ -69,7 +70,7 @@ const ByOtherBank = () => {
                         <div className="form-submit-left">
                             <input
                                 type='submit'
-                                value="Cancle"
+                                value="Cancel"
                                 className='submit-1'
                             ></input>
                         </div>

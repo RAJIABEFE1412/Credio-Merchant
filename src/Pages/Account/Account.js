@@ -63,7 +63,7 @@ const Account = () => {
                             <div className="form-submit-left">
                                 <input
                                     type='submit'
-                                    value="Cancle"
+                                    value="Cancel"
                                     className='submit-1'
                                 ></input>
                             </div>

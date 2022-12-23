@@ -56,7 +56,7 @@ const Dashboard = () => {
                             <p className="deposit-text">Deposit</p>
                         </div>
                     </Link>
-                    <Link to="/cashless">
+                    <Link to="/bycredio">
                         <div className="actions credio-btn">
                             <TbCashBanknoteOff/>
                             <p className="cashless-text">Credio</p>

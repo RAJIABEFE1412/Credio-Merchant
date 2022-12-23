@@ -9,7 +9,7 @@ const SavingPreview = () => {
         <div className="savingpreview">
             <div className="deposit-title">
                 <div className="back">
-                    <Link to='/savings'>
+                    <Link to='/cashless'>
                         <BsArrowLeft />
                     </Link>
                 </div>
@@ -37,7 +37,7 @@ const SavingPreview = () => {
                         <div className="form-submit-left">
                             <input
                                 type='submit'
-                                value="Cancle"
+                                value="Cancel"
                                 className='submit-1'
                             ></input>
                         </div>

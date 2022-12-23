@@ -23,7 +23,7 @@ body{
 a{
   text-decoration: none;
 }
-input{
+input, textarea, select{
   outline: none;
 }
 @media (Max-width: 500px) {

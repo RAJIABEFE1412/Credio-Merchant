@@ -1,7 +1,7 @@
 .transaction-header{
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    padding: 40px;
 }
 .tran-history p{
     font-family: 'Poppins';
@@ -25,7 +25,11 @@
     border-radius: 3px;
 }
 .transaction-table{
-    margin-top: -20px;
-    padding: 40px;
     width: 100%;
+}
+@media (max-width: 500px) {
+    .tran-history p{
+        font-size: 18px;
+        font-weight: 600;
+    }
 }

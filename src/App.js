@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Deposit from './Pages/Deposit/Deposit';
 import ByCredio from './Pages/Deposit/ByCredio';
-import ByCard from './Pages/Deposit/ByCard';
+
 import ByOtherBank from './Pages/Deposit/ByOtherBank';
 import PreviewOtherBank from './Pages/Deposit/PreviewOtherBank';
 import Saving from './Pages/Savings/Saving';
@@ -20,7 +20,7 @@ import Transaction from './Pages/Transaction/Transaction';
 import Chat from './Pages/Chat/chat';
 import Profile from './Pages/Profile/Profile';
 import ProfileForm from './Pages/Profile/ProfileForm';
-import ByCardSender from './Pages/Deposit/ByCardSender.js';
+import PreviewByCredio from './Pages/Deposit/PreviewByCredio';
 
 function App() {
   return (
@@ -34,8 +34,9 @@ function App() {
               <Route exact path='/' element={<Dashboard/>}></Route>
               <Route exact path='/deposit' element={<Deposit/>}></Route>
               <Route exact path='/bycredio' element={<ByCredio/>}></Route>
-              <Route exact path='/bycard' element={<ByCard/>}></Route>
-              <Route exact path='/bycardsender' element={<ByCardSender/>}></Route>
+              <Route exact path='/previewcredio' element={<PreviewByCredio/>}></Route>
+              {/* <Route exact path='/bycard' element={<ByCard/>}></Route>
+              <Route exact path='/bycardsender' element={<ByCardSender/>}></Route> */}
               <Route exact path='/bybank' element={<ByOtherBank/>}></Route>
               <Route exact path='/preview' element={<PreviewOtherBank/>}></Route>
               <Route exact path='/cashless' element={<Saving/>}></Route>

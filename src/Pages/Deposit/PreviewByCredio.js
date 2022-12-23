@@ -1,10 +1,7 @@
 import {BsArrowLeft} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { useState, useEffect, useRef } from 'react';
-import './PreviewOtherBank.css';
-import Modal from '../../Components/Modal/Modal';
-const PreviewOtherBank = () => {
-    const [openModal, setOpenModal] = useState(false);
+const PreviewByCredio = () => {
     const [pin, setPin] = useState("");
     const atmpin = useRef(null);
     useEffect(()=>{
@@ -41,10 +38,10 @@ const PreviewOtherBank = () => {
         setPin3(e.target.value)
     }
     return ( 
-        <div className="previewotherbank">
+        <div className="previewbycredio">
             <div className="deposit-title">
                 <div className="back">
-                    <Link to='/bybank'>
+                    <Link to='/bycredio'>
                         <BsArrowLeft />
                     </Link>
                 </div>
@@ -56,7 +53,7 @@ const PreviewOtherBank = () => {
                         <div className="preview-1 preview-upper">
                             <div className="preview-left">
                                 <p className="receipt-head">Bank Name</p>
-                                <p className="receipt-body">Sterling Bank</p>
+                                <p className="receipt-body">Crediometer</p>
                             </div>
                             <div className="preview-right">
                                 <p className="receipt-head">Amount</p>
@@ -75,7 +72,7 @@ const PreviewOtherBank = () => {
                         </div>
                         <div className="preview-1">
                             <div className="preview-left">
-                                <p className="receipt-head">Account Name</p>
+                                <p className="receipt-head">Business Name</p>
                                 <p className="receipt-body">ALERIWA PRECIOUS OLUWANIFEMI</p>
                             </div>
                             <div className="preview-right">
@@ -133,7 +130,6 @@ const PreviewOtherBank = () => {
                     </div>
                     <div className="form-submit-right saving-submit withdraw-submit">
                             <button
-                                onClick={()=> setOpenModal(true)}
                                 type='submit'
                                 value="Continue"
                                 className='submit-2'
@@ -160,7 +156,7 @@ const PreviewOtherBank = () => {
                 </div>
             </div>
         </div>
-     );
+    );
 }
  
-export default PreviewOtherBank;
+export default PreviewByCredio;
