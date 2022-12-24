@@ -31,10 +31,10 @@ input, textarea, select{
     background-color: white;
   }
   .app-container{
-    padding: 20px;
+    padding: 0px;
   }
   .body{
-    padding: 0px;
+    padding: 20px;
     margin-left: 0px;
   }
 }

@@ -24,3 +24,8 @@
     font-size: 20px;
     color:  #982C31;
 }
+@media (max-width: 500px){
+    .profileform-subbody-inner{
+        width: 100%;
+    }
+}

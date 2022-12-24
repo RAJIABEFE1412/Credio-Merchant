@@ -1,4 +1,15 @@
 .navbar{
+    /* position: fixed;
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between; */
+}
+.navbar-inner{
     position: fixed;
     width: 100%;
     height: 80px;
@@ -8,6 +19,15 @@
     background-color: white;
     display: flex;
     justify-content: space-between;
+}
+.navbar-mobile{
+    display: none;
+    position: absolute;
+    padding: 20px;
+    z-index: 100;
+}
+.navbar-mobile svg{
+    font-size: 20px;
 }
 .logo-text{
     font-family: 'Poppins';
@@ -84,6 +104,14 @@
 }
 @media (Max-width: 500px){
     .navbar{
+        width: 100%;
+        height: 25px;
+        position: relative;
+    }
+    .navbar-inner{
         display: none;
+    }
+    .navbar-mobile{
+        display: block;
     }
 }

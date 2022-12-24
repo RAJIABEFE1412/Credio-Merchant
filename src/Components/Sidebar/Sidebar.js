@@ -2,9 +2,9 @@ import './Sidebar.css';
 import { SidebarDetails } from './SidebarDetails';
 import {Link} from 'react-router-dom'
 import {IoLogInOutline} from 'react-icons/io5'
-const Sidebar = () => {
+const Sidebar = ({Sidebar, closeSidebar}) => {
     return ( 
-        <div className="sidebar">
+        <div className={Sidebar?"sidebar sidebar--open": "sidebar"}>
             <div className="links">
                 <nav>
                 {SidebarDetails.map((val, key)=>{
@@ -12,6 +12,7 @@ const Sidebar = () => {
                             <li
                                 key={key}
                                 className="link-path"
+                                onClick={closeSidebar}
                             >
                                 <Link to={val.link}>
                                     <div className="sideicon">

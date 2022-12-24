@@ -62,6 +62,13 @@
 }
 @media (Max-width: 500px) {
     .sidebar{
-        display: none;
+        margin-top: -25px;
+        position: absolute;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: all 0.4s;
     } 
+    .sidebar--open{
+        transform: translateX(0%);
+    }
 }

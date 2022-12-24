@@ -1,4 +1,6 @@
 import { FiCopy } from "react-icons/fi";
+import { Link } from 'react-router-dom';
+import {BsArrowLeft} from 'react-icons/bs';
 import ProfileField from "../../Components/Input/ProfileField";
 import "./ProfileForm.css";
 const ProfileForm = () => {
@@ -6,6 +8,9 @@ const ProfileForm = () => {
         <div className="profileform">
             <div className="deposit-title">
                 <div className="back">
+                    <Link to='/profile'>
+                        <BsArrowLeft />
+                    </Link>
                 </div>
                 <p className="profile-text">Profile</p>
             </div>

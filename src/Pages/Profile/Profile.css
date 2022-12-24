@@ -25,6 +25,9 @@
     border-radius: 50%;
     border: 1.00945px solid #982C31;
 }
+.profile-edit-mobile{
+    display: none;
+}
 .profile-edit{
     text-align: center;
     font-family: 'Roboto';
@@ -49,11 +52,37 @@
     font-size: 17px;
     color: #929292;
 }
-.profile-subbody{
-    margin-top: 40px;
-    padding: 80px;
+.profile-vault{
+    margin-top: 20px;
+    background-color: antiquewhite;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+.vault-title, .vault-number{
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+}
+.vault-number{
+    margin-top: 10px;
+    font-size: 28px;
+}
+.profile-vault-right svg{
+    color: rgb(129, 129, 129);
+    font-size: 25px;
+}
+.profile-subbody{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.manage-right{
+    display: none;
 }
 .manage-icon-outer, .change-icon-outer, .invite-icon-outer{
     display: flex;
@@ -81,4 +110,55 @@
     font-size: 25px;
     letter-spacing: -0.36975px;
     color: #383838;
+}
+@media (max-width: 500px) {
+    .profile-header{
+        margin-top: 50px;
+    }
+    .profile-edit{
+        display: none;
+    }
+    .profile-edit-mobile{
+        display: block;
+        font-weight: 600;
+    }
+    .vault-title, .vault-number{
+        font-size: 20px;
+    }
+    .profile-subbody{
+        display: block;
+    }
+    .manage-icon-outer, .change-icon-outer, .invite-icon-outer{
+        display: block;
+    }
+    .manage-icon, .change-icon, .invite-icon{
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+    }
+    .manage-icon svg, .change-icon svg, .invite-icon svg{
+        font-size: 18px;
+    }
+    .manage-text, .change-text, .invite-text{
+        text-align: left;
+        font-size: 20px;
+    }
+    .manage, .change, .invite{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid rgb(161, 161, 161);
+    }
+    .manage-left{
+        display: flex;
+        align-items: center;
+    }
+    .manage-right{
+        display: block;
+    }
+    .manage-left p{
+        margin-left: 10px;
+    }
 }

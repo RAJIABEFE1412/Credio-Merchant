@@ -21,14 +21,20 @@ import Chat from './Pages/Chat/chat';
 import Profile from './Pages/Profile/Profile';
 import ProfileForm from './Pages/Profile/ProfileForm';
 import PreviewByCredio from './Pages/Deposit/PreviewByCredio';
+import { FaBars } from 'react-icons/fa';
+import { useState } from 'react';
 
 function App() {
+  const[sidebar, setSidebar] = useState(false);
+  const toggleSidebar = () =>{
+    setSidebar((prevState) => !prevState)
+  }
   return (
     <Router>
       <div className="App">
-        <Navbar/>
+        <Navbar openSidebar={toggleSidebar}/>
         <div className="app-container">
-          <Sidebar/>
+          <Sidebar Sidebar={sidebar} closeSidebar={toggleSidebar}/>
           <div className="body">
             <Routes>
               <Route exact path='/' element={<Dashboard/>}></Route>
