@@ -29,11 +29,17 @@ const ByCredio = () => {
                             />
                         </div>
                         <div className="form-right">
-                            <InputField
-                                label="Business name"
-                                type="text"
-                                placeholder='Business name'
-                            />
+                            <div className="inputfield">
+                                <label>Business Name</label><br></br>
+                                <div className="inputbox2">
+                                    <input
+                                        type='text'
+                                        readOnly
+                                        value='Business Name'
+                                    >
+                                    </input>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="form-2">

@@ -43,12 +43,18 @@ const ByOtherBank = () => {
                         </div>
                     </div>
                     <div className="form-1">
-                          <div className="form-right">
-                            <InputField
-                                label="Account Holder's Name"
-                                type="text"
-                                placeholder='Account Name'
-                            />
+                        <div className="form-right">
+                            <div className="inputfield">
+                                <label>Account Holder's Name</label><br></br>
+                                <div className="inputbox2">
+                                    <input
+                                        type='text'
+                                        readOnly
+                                        value='Account Name'
+                                    >
+                                    </input>
+                                </div>
+                            </div>
                         </div>
                         <div className="form-left">
                             <AmountField
