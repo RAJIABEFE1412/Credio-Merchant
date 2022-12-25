@@ -5,6 +5,10 @@
     width: 100%;
     padding: 10px;
     background-color: antiquewhite;
+    background-image: url(../../assets/image/background.svg);
+    background-repeat: no-repeat;
+    background-size: 400px;
+    background-position: top right;
 }
 .preview-1{
     display: flex;

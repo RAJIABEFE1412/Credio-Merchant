@@ -16,7 +16,6 @@
 .chat-right{
     width: 72%;
 }
-
 .chat-search{
     display: flex;
     align-items: center;
@@ -101,4 +100,18 @@
 .attach-icon svg, .send-icon svg{
     font-size: 25px;
     color: #FFF3E9;
+}
+@media (max-width:500px) {
+    .chat-header{
+        margin-top: 0px;
+    }
+    .chat-left{
+        width: 100%;
+    }
+    .chat-right{
+        display: none;
+    }
+    .chat-message{
+        height: 80vh;
+    }
 }
