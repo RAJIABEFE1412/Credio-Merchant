@@ -62,7 +62,7 @@
 }
 @media (Max-width: 500px) {
     .sidebar{
-        margin-top: -25px;
+        margin-top: -35px;
         position: absolute;
         height: 100vh;
         transform: translateX(-100%);
