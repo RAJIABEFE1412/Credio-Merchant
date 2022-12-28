@@ -67,6 +67,7 @@
         height: 100vh;
         transform: translateX(-100%);
         transition: all 0.4s;
+        z-index: 100;
     } 
     .sidebar--open{
         transform: translateX(0%);
