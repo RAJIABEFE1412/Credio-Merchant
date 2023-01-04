@@ -7,7 +7,7 @@ const Account = () => {
         <div className="account">
             <div className="deposit-title">
                 <div className="back">
-                    <Link to='/'>
+                    <Link to='/dashboard'>
                         <BsArrowLeft />
                     </Link>
                 </div>

@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState} from "react";
 import { BsArrowLeft } from "react-icons/bs";
 import { useCallback } from 'react';
 import './CardPin.css'
 import PinField from "../../Components/Input/PinField";
-import { useState } from "react";
+
 import ModalSaving from "../../Components/Modal/ModalSaving";
+import Navbar from '../../Components/Navbar/Navbar';
+import Sidebar from '../../Components/Sidebar/Sidebar';
 const CardPin = () => {
+    const[sidebar, setSidebar] = useState(false);
+    const toggleSidebar = () =>{
+      setSidebar((prevState) => !prevState)
+    }
     const [openModal, setOpenModal] = useState(false);
     const [pin, setPin] = useState("");
     const atmpin = useRef(null);
@@ -45,74 +51,81 @@ const CardPin = () => {
     }
     return ( 
         <div className="cardpin">
-            <div className="deposit-title">
-                <div className="back">
-                    <Link to='/withdraw'>
-                        <BsArrowLeft/>
-                    </Link>
-                </div>
-                <p className="deposit-text">Card Pin</p>
-            </div>
-            <div className="cardpin-body">
-                <div className="cardpin-body-inner">
-                    <p className="enter-pin">Please Enter Your Card Pin</p>
-                    <div className="field-container">
-                        <div className="field-1">
-                            <div className="pinfield">
-                                <input
-                                    type="text"
-                                    maxlength= "1"
-                                    value={pin}
-                                    onChange={onChangepin1}
-                                    ref={atmpin}
-                                    autoFocus
-                                ></input>
-                            </div>
+            <Navbar openSidebar={toggleSidebar}/>
+            <div className="app-container">
+                <Sidebar Sidebar={sidebar} closeSidebar={toggleSidebar}/> 
+                <div className="body">
+                    <div className="deposit-title">
+                        <div className="back">
+                            <Link to='/withdraw'>
+                                <BsArrowLeft/>
+                            </Link>
                         </div>
-                        <div className="field-1">
-                            <div className="pinfield">
-                                <input
-                                    type="text"
-                                    maxlength= "1"
-                                    value={pin1}
-                                    onChange={onChangepin2}
-                                    ref={atmpin1}
-                                ></input>
+                        <p className="deposit-text">Card Pin</p>
+                    </div>
+                    <div className="cardpin-body">
+                        <div className="cardpin-body-inner">
+                            <p className="enter-pin">Please Enter Your Card Pin</p>
+                            <div className="field-container">
+                                <div className="field-1">
+                                    <div className="pinfield">
+                                        <input
+                                            type="text"
+                                            maxlength= "1"
+                                            value={pin}
+                                            onChange={onChangepin1}
+                                            ref={atmpin}
+                                            autoFocus
+                                        ></input>
+                                    </div>
+                                </div>
+                                <div className="field-1">
+                                    <div className="pinfield">
+                                        <input
+                                            type="text"
+                                            maxlength= "1"
+                                            value={pin1}
+                                            onChange={onChangepin2}
+                                            ref={atmpin1}
+                                        ></input>
+                                    </div>
+                                </div>
+                                <div className="field-1">
+                                    <div className="pinfield">
+                                        <input
+                                            type="text"
+                                            maxlength= "1"
+                                            value={pin2}
+                                            onChange={onChangepin3}
+                                            ref={atmpin2}
+                                        ></input>
+                                    </div>
+                                </div>
+                                <div className="field-1">
+                                    <div className="pinfield">
+                                        <input
+                                            type="text"
+                                            maxlength= "1"
+                                            value={pin3}
+                                            onChange={onChangepin4}
+                                            ref={atmpin3}
+                                        ></input>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div className="field-1">
-                            <div className="pinfield">
-                                <input
-                                    type="text"
-                                    maxlength= "1"
-                                    value={pin2}
-                                    onChange={onChangepin3}
-                                    ref={atmpin2}
-                                ></input>
-                            </div>
-                        </div>
-                        <div className="field-1">
-                            <div className="pinfield">
-                                <input
-                                    type="text"
-                                    maxlength= "1"
-                                    value={pin3}
-                                    onChange={onChangepin4}
-                                    ref={atmpin3}
-                                ></input>
+                            <div className="form-submit-right saving-submit withdraw-submit">
+                                    <button
+                                        onClick={()=> setOpenModal(true)}
+                                        type='submit'
+                                        value="Continue"
+                                        className='submit-2'
+                                    >Finish</button>
+                                    {openModal && <ModalSaving closeModal={setOpenModal}/>}
                             </div>
                         </div>
                     </div>
-                    <div className="form-submit-right saving-submit withdraw-submit">
-                            <button
-                                onClick={()=> setOpenModal(true)}
-                                type='submit'
-                                value="Continue"
-                                className='submit-2'
-                            >Finish</button>
-                            {openModal && <ModalSaving closeModal={setOpenModal}/>}
-                    </div>
                 </div>
+
             </div>
         </div>
     );

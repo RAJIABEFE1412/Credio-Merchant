@@ -1,8 +1,10 @@
 import './Sidebar.css';
+import { useState } from 'react';
 import { SidebarDetails } from './SidebarDetails';
 import {Link} from 'react-router-dom'
 import {IoLogInOutline} from 'react-icons/io5'
 const Sidebar = ({Sidebar, closeSidebar}) => {
+
     return ( 
         <div className={Sidebar?"sidebar sidebar--open": "sidebar"}>
             <div className="links">

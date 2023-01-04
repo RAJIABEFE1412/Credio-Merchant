@@ -6,77 +6,89 @@ import { useState } from 'react';
 import './ByCredio.css';
 import { Link } from 'react-router-dom';
 import TextField from '../../Components/Input/TextField';
+import Navbar from '../../Components/Navbar/Navbar';
+import Sidebar from '../../Components/Sidebar/Sidebar';
 const ByCredio = () => {
+    const[sidebar, setSidebar] = useState(false);
+    const toggleSidebar = () =>{
+      setSidebar((prevState) => !prevState)
+    }
     const [openModal, setOpenModal] = useState(false);
     return ( 
         <div className="bycredio">
-            <div className="deposit-title">
-                <div className="back">
-                    <Link to='/'>
-                        <BsArrowLeft />
-                    </Link>
-                </div>
-                <p className="deposit-text">Deposit to crediometer</p>
-            </div>
-            <div className="bycredio-body">
-                <form className='credio-form'>
-                    <div className="form-1">
-                        <div className="form-left">
-                            <InputField
-                                label="Vault number"
-                                type="text"
-                                placeholder='Number'
-                            />
-                        </div>
-                        <div className="form-right">
-                            <div className="inputfield">
-                                <label>Business Name</label><br></br>
-                                <div className="inputbox2">
-                                    <input
-                                        type='text'
-                                        readOnly
-                                        value='Business Name'
-                                    >
-                                    </input>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="form-2">
-                            <AmountField
-                                label="Amount"
-                                type="number"
-                                placeholder='Amount'
-                            />
-                    </div>
-                    <div className="form-2">
-                        <TextField
-                            label="Comment"
-                            type="text"
-                            placeholder='Make a comment'
-                        />
-                    </div>
-                    <div className="form-submit">
-                        <div className="form-submit-left">
-                            <input
-                                type='submit'
-                                value="Cancel"
-                                className='submit-1'
-                            ></input>
-                        </div>
-                        <div className="form-submit-right">
-                            <Link to='/previewcredio'>
-                                <button
-                                    type='submit'
-                                    value="Continue"
-                                    className='submit-2'
-                                >Continue</button>
+            <Navbar openSidebar={toggleSidebar}/>
+            <div className="app-container">
+                <Sidebar Sidebar={sidebar} closeSidebar={toggleSidebar}/> 
+                <div className="body">
+                    <div className="deposit-title">
+                        <div className="back">
+                            <Link to='/dashboard'>
+                                <BsArrowLeft />
                             </Link>
                         </div>
+                        <p className="deposit-text">Deposit to crediometer</p>
                     </div>
-                </form>
+                    <div className="bycredio-body">
+                        <form className='credio-form'>
+                            <div className="form-1">
+                                <div className="form-left">
+                                    <InputField
+                                        label="Vault number"
+                                        type="text"
+                                        placeholder='Number'
+                                    />
+                                </div>
+                                <div className="form-right">
+                                    <div className="inputfield">
+                                        <label>Business Name</label><br></br>
+                                        <div className="inputbox2">
+                                            <input
+                                                type='text'
+                                                readOnly
+                                                value='Business Name'
+                                            >
+                                            </input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="form-2">
+                                    <AmountField
+                                        label="Amount"
+                                        type="number"
+                                        placeholder='Amount'
+                                    />
+                            </div>
+                            <div className="form-2">
+                                <TextField
+                                    label="Comment"
+                                    type="text"
+                                    placeholder='Make a comment'
+                                />
+                            </div>
+                            <div className="form-submit">
+                                <div className="form-submit-left">
+                                    <input
+                                        type='submit'
+                                        value="Cancel"
+                                        className='submit-1'
+                                    ></input>
+                                </div>
+                                <div className="form-submit-right">
+                                    <Link to='/previewcredio'>
+                                        <button
+                                            type='submit'
+                                            value="Continue"
+                                            className='submit-2'
+                                        >Continue</button>
+                                    </Link>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
             </div>
-            
         </div>
      );
 }

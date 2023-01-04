@@ -1,4 +1,5 @@
 import './Navbar.css'
+import { useState } from 'react';
 import {FiSearch} from 'react-icons/fi';
 import {BsBell} from 'react-icons/bs';
 import { FaBars } from 'react-icons/fa';

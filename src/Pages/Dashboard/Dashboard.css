@@ -7,6 +7,12 @@
 .vault{
     width: 100%;
 }
+.loader{
+    margin-top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .vault-text, .action-text, .transaction-head{
     font-family: 'Poppins';
     font-style: normal;
@@ -207,5 +213,12 @@
         font-weight: 600;
         font-size: 20px;
         color: #383838;
+    }
+    .transaction-table-mobile{
+        margin-top: 10px;
+        height: 500px;
+        overflow-y: auto;
+        overscroll-behavior-inline: contain;
+        justify-content: space-between;
     }
 }

@@ -1,0 +1,168 @@
+.login, .register{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.login-left{
+    height: 100vh;
+    background-image: url(../../assets/image/young-afro-girl-wearing-glasses-looking-happy-texting-with-frien\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+.login-logo{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    color: #B11226;
+    padding: 20px;
+}
+.group-lower{
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    height: 418px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) -2.99%, #B11226 112.08%);
+    background-blend-mode: multiply;
+}
+.group-lower-inner{
+    padding: 20px;
+}
+.group-outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 150px;
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.3) -19.35%, rgba(217, 217, 217, 0) 107.1%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5.5px);
+    border-radius: 10px;
+}
+.group p{
+    text-align: left;
+    margin: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 90%;
+    color: white;
+}
+.lorem-outer{
+    display: flex;
+    justify-content: center;
+}
+.lorem{
+    color: white;
+    width:80%;
+    height: 51px;
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+}
+.login-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-header{
+    text-align: left;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 60px;
+    background: linear-gradient(180deg, #000000 20.05%, rgba(198, 9, 9, 0.83) 128.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.login-text{
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    background: linear-gradient(180deg, #000000 20.05%, rgba(198, 9, 9, 0.83) 128.33%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; 
+}
+.forget-password a{
+    text-decoration: none;
+}
+.forget-password p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(177, 18, 38, 0.7);
+}
+.submit{
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 20px;
+    height: 72px;
+    background: #AC1337;
+    border-radius: 10px;
+}
+.submit input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+}
+.account{
+    margin-top: 17px;
+}
+.account p{
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.9);
+}
+.account p span{
+    color: rgba(177, 18, 38, 0.7);
+}
+@media (max-width: 500px) {
+    .login, .register{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    .login-left{
+        display: none;
+    }
+    .login-header{
+        font-size: 30px;
+    }
+    .login-text{
+        text-align: left;
+        font-size: 16px;
+    }
+}

@@ -44,11 +44,12 @@
     color: rgba(0, 0, 0, 0.5);
     transition: 0.5s;
 }
+.inputbox input:valid ~ span,
 .inputbox input:focus ~ span{
     transform: translateX(15px) translateY(-25px);
     font-size: 18px;
     padding: 0 15px; 
-    background-color: #f5f5f5;   
+    background-color: white;   
 }
 .amountfield-inner{
     margin-top: 10px;

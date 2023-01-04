@@ -4,7 +4,7 @@ export const SidebarDetails = [
     {
         title:"Dashboard",
         icon:<BiHome/>, 
-        link:"/"
+        link:"/dashboard"
     },
     {
         title:"Store",
