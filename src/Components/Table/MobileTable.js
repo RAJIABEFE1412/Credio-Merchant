@@ -2,14 +2,22 @@ import "./MobileTable.css";
 import {BsArrowUpRight} from 'react-icons/bs'
 import useFetch from "../../useFetch";
 import MoonLoader from "react-spinners/MoonLoader";
-import { useState } from "react";
-const MobileTable = () => {
+import { useState, useEffect } from "react";
+import { connect } from 'react-redux';
+import { fetchTransaction } from "../../Redux/Transaction/TransactionAction";
+const MobileTable = ({transactionData, fetchTransaction}) => {
     const [spinner, setSpinner]= useState(true)
-    const {data: transaction, ispending, error} = useFetch(`https://credio-api.herokuapp.com/api/v1/agent/user/account/transaction/history`);
+
+    useEffect(()=>{
+        fetchTransaction()
+        console.log(transactionData)
+        
+    }, [])
+    // const {data: transaction, ispending, error} = useFetch(`https://credio-api.herokuapp.com/api/v1/agent/user/account/transaction/history`);
     return ( 
         <div className="mobiletable">
             <div className="loader">
-                {ispending && <div> {
+                {transactionData.loading && <div> {
                     spinner?
                     <MoonLoader
                         color={'#B11226'}
@@ -20,9 +28,8 @@ const MobileTable = () => {
                     /> :<div></div>}
                 </div>}
             </div>
-            {error && <div>{error}</div>}
-            {transaction &&  console.log(transaction)}
-            {(transaction?.transaction ?? !1 )&&  transaction?.transaction.map((transaction)=>{
+            {transactionData.error && <div>{transactionData.error}</div>}
+            {transactionData && transactionData?.transaction && transactionData?.transaction.map((transaction)=>{
                 return(
                     <div className="mobiletable-inner">
                         <div className="mobiletable-inner-left">
@@ -44,5 +51,17 @@ const MobileTable = () => {
         </div>
      );
 }
+
+const mapStoreToProps = state => {
+    return{
+        transactionData: state.transaction
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        fetchTransaction: () => dispatch(fetchTransaction())
+    }
+}
  
-export default MobileTable;
+export default connect(mapStoreToProps, mapDispatchToProps)(MobileTable);

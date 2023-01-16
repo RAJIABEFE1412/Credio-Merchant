@@ -11,6 +11,8 @@
 .inputbox2{
     position: relative;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 .inputbox2 input{
     font-family: 'Poppins';
@@ -33,8 +35,12 @@
     font-size: 20px;
     color: rgba(0, 0, 0, 0.5);
 }
-.inputbox2 span{
+.place-mobile{
     display: none;
+}
+.psw-visible{
+    margin-left: -50px;
+    margin-top: 10px;
 }
 @media (max-width: 500px) {
     .inputfield label{
@@ -46,7 +52,8 @@
     .inputbox2 input::placeholder{
         visibility: hidden;
     }
-    .inputbox2 span{
+    
+    .place-mobile{
         display: block;
         position:absolute;
         top: 0;
@@ -60,8 +67,8 @@
         color: rgba(0, 0, 0, 0.5);
         transition: 0.5s;
     }
-    .inputbox2 input:focus ~ span,
-    .inputbox2 input:valid ~ span{
+    .inputbox2 input:focus ~ .place-mobile,
+    .inputbox2 input:valid ~ .place-mobile{
         transform: translateX(35px) translateY(-5px);
         font-size: 18px;
         padding: 0 15px; 

@@ -32,9 +32,7 @@
     font-size: 20px;
     color: rgba(0, 0, 0, 0.5);
 }
-.inputbox2 span{
-    display: none;
-}
+
 @media (max-width: 500px) {
     .textfield label{
         display: none;
@@ -45,7 +43,8 @@
     .inputbox2 textarea::placeholder{
         visibility: hidden;
     }
-    .inputbox2 span{
+  
+    /* .inputbox2 span{
         display: block;
         position:absolute;
         top: 0;
@@ -58,8 +57,10 @@
         font-size: 20px;
         color: rgba(0, 0, 0, 0.5);
         transition: 0.5s;
-    }
-    .inputbox2 textarea:focus ~ span{
+    } */
+    .inputbox2 textarea:focus ~ .place-mobile,
+    .inputbox2 textarea:valid ~ .place-mobile
+    {
         transform: translateX(35px) translateY(-5px);
         font-size: 18px;
         padding: 0 15px; 

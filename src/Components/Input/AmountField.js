@@ -11,7 +11,7 @@ const AmountField = (props) => {
                         required
                     >
                     </input>
-                    <span>Amount</span>
+                    <span className='place-mobile'>Amount</span>
                 </div>
                 <div className="ngn"><p>NGN</p></div>
             </div>

@@ -1,0 +1,3 @@
+export const BANK_REQUEST = 'BANK_REQUEST'
+export const BANK_SUCCESS = 'BANK_SUCCESS'
+export const BANK_FALIURE = 'BANK_FALIURE'

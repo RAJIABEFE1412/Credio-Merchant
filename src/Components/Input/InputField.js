@@ -9,7 +9,7 @@ const InputField = (props) => {
                     placeholder={props.placeholder}
                 >
                 </input>
-                <span>{props.placeholder}</span>
+                <span className='place-mobile'>{props.placeholder}</span>
             </div>
         </div>
      );

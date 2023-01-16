@@ -93,7 +93,7 @@ const Saving = () => {
                                         placeholder="00000000"
                                     >
                                     </input>
-                                    <span>Phone Number</span>
+                                    <span className='place-mobile'>Phone Number</span>
                                 </div>
                             </div>
                             </div>
@@ -111,7 +111,7 @@ const Saving = () => {
                                             required
                                         >
                                         </input>
-                                        <span>Amount</span>
+                                        <span className='place-mobile'>Amount</span>
                                     </div>
                                     <div className="ngn"><p>NGN</p></div>
                                 </div>

@@ -9,7 +9,7 @@ const TextField = (props) => {
                       placeholder={props.placeholder}
                     >
                     </textarea>
-                    <span>{props.placeholder}</span>
+                    <span className='place-mobile'>{props.placeholder}</span>
                 </div>
         </div>
     );

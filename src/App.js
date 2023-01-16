@@ -5,7 +5,8 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Deposit from './Pages/Deposit/Deposit';
 import ByCredio from './Pages/Deposit/ByCredio';
-
+import {Provider} from 'react-redux';
+import store from './Redux/Store'
 import ByOtherBank from './Pages/Deposit/ByOtherBank';
 import PreviewOtherBank from './Pages/Deposit/PreviewOtherBank';
 import Saving from './Pages/Savings/Saving';
@@ -29,6 +30,7 @@ import Register from './Pages/Registration/Register';
 function App() {
   return (
     <Router>
+      <Provider store={store}>
       <div className="App">
             <Routes>
               {/* PUBLIC ROUTES */}
@@ -57,6 +59,7 @@ function App() {
               <Route exact path='/profileform' element={<ProfileForm/>}></Route>
             </Routes>
           </div>
+        </Provider>
     </Router>
   );
 }

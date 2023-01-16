@@ -8,14 +8,20 @@ import Navbar from '../../Components/Navbar/Navbar';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import useFetch from "../../useFetch";
 import { useParams } from "react-router-dom";
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
+import { connect } from "react-redux";
+import { fetchProfile } from "../../Redux";
 import "./Profile.css";
-const Profile = () => {
+const Profile = ({profileData, fetchProfile}) => {
     const[sidebar, setSidebar] = useState(false);
     const toggleSidebar = () =>{
       setSidebar((prevState) => !prevState)
     }
-    const {data: profile, ispending, error} = useFetch(`https://credio-api.herokuapp.com/api/v1/agent/user/getProfile`);
+
+    useEffect(()=>{
+        fetchProfile()
+    }, [])
+    // const {data: profile, ispending, error} = useFetch(`https://credio-api.herokuapp.com/api/v1/agent/user/getProfile`);
     return ( 
         <div className="profile">
             <Navbar openSidebar={toggleSidebar}/>
@@ -28,25 +34,25 @@ const Profile = () => {
                         <p className="profile-text">Profile</p>
                         <Link to='/profileform'><p className="profile-edit profile-edit-mobile">Edit</p></Link>
                     </div>
-                        {ispending && <div>loading.....</div>}
+                        {/* {ispending && <div>loading.....</div>}
                         {error && <div>{error}</div>}
-                         {profile &&   console.log(profile)}
-                        {(profile?.message?.profile ??  !1) &&   <div className="profile-body" > 
+                        */}
+                        {profileData && profileData?.profile &&  <div className="profile-body" > 
                                 {/* key={key} */}
                                     <div className="profile-header">
                                         <div className="profile-header-inner">
                                             <div className="profile-image-con">
-                                            <img className="profile-image" src={profile?.message?.profile?.profilePicture ?? "********"}></img>
+                                            <img className="profile-image" src={profileData?.profile?.message?.profile?.profilePicture ?? "********"}></img>
                                             </div>
                                             <Link to='/profileform'><p className="profile-edit">Edit</p></Link>
-                                            <p className="profile-name">{profile?.message?.profile?.bvn?.firstName ?? "************"} {profile?.message?.profile?.bvn?.lastName ?? "************"}</p>
+                                            <p className="profile-name">{profileData?.profile?.message?.profile?.bvn?.firstName ?? "************"} {profileData?.profile?.message?.profile?.bvn?.lastName ?? "************"}</p>
                                             <p className="profile-location">21 liter rd, Lagos, Nigeria</p> 
                                         </div>
                                     </div>
                                     <div className="profile-vault">
                                         <div className="profile-vault-left">
                                             <p className="vault-title">Vault Number</p>
-                                            <p className="vault-number">{profile?.message?.profile?.vaults?.accountNumber ?? "************"}</p>
+                                            <p className="vault-number">{profileData?.profile?.message?.profile?.vaults?.accountNumber ?? "************"}</p>
                                         </div>
                                         <div className="profile-vault-right">
                                             <FiCopy/>
@@ -127,5 +133,17 @@ const Profile = () => {
         </div>
      );
 }
+
+const mapStoreToProps = state => {
+    return{
+        profileData: state.profile
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return{
+        fetchProfile: () => dispatch(fetchProfile())
+    }
+}
  
-export default Profile;
+export default connect(mapStoreToProps, mapDispatchToProps)(Profile);
