@@ -30,7 +30,7 @@ const Navbar = ({openSidebar}) => {
                             </div>
                             <div className="navbar-name">
                                 <p className='greeting'>Good day</p>
-                                <p className="name">{profile?.message?.profile?.bvn?.firstName ?? "************"} {profile?.message?.profile?.bvn?.lastName ?? "************"}</p>
+                                <p className="name">{profile?.message?.profile?.businessName ?? "************"} </p>
                             </div>
                         </div>
                     }

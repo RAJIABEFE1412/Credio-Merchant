@@ -12,7 +12,6 @@ const useFetch = (dataurl) => {
         console.log("Dashboard is mounted");
         console.log(`${localStorage.getItem("auth")}`)
         let datas = JSON.parse(localStorage.getItem("auth"))
-        console.log(`data ----- ${datas}`)
         console.log(`this is data ${datas.token.token.token}`)
         const fetchData = async (url) => {
             setIspending(true);

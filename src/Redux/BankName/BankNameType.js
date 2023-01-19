@@ -1,2 +1,0 @@
-export const POST_SUCCESS = 'POST_SUCCESS'
-export const FETCH_SUCCESS = 'FETCH_SUCCESS'

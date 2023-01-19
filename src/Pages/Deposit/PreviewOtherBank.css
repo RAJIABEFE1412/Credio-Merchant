@@ -3,11 +3,11 @@
 }
 .receiver-details{
     width: 100%;
-    padding: 10px;
+    padding: 40px;
     background-color: antiquewhite;
     background-image: url(../../assets/image/background.svg);
     background-repeat: no-repeat;
-    background-size: 400px;
+    background-size: 350px;
     background-position: top right;
 }
 .preview-1{
