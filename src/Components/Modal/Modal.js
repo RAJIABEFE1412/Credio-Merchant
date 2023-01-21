@@ -4,7 +4,8 @@ const Modal = ({closeModal}) => {
     return ( 
         <div className="modal-background">
             <div className="modal-container">
-                <p className="transaction-success">Transfer successful</p>
+
+             <p className="transaction-success">Transfer successful</p>
                 <div className="transaction-participants">
                     <div className="transaction-right">
 
