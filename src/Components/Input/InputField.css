@@ -8,6 +8,9 @@
     font-size: 24px;
     color: rgba(0, 0, 0, 0.8);
 }
+.loginfield label{
+    font-size: 16px;
+}
 .inputbox2{
     position: relative;
     width: 100%;
@@ -18,7 +21,7 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 13px;
     background-color: transparent;
     color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -28,12 +31,18 @@
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.5);
 }
+.inputbox-login input{
+    height: 54px;
+}
 .inputbox2 input::placeholder{
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     color: rgba(0, 0, 0, 0.5);
+}
+.inputbox-login input::placeholder{
+    font-size: 13px;
 }
 .place-mobile{
     display: none;
