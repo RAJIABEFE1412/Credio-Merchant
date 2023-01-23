@@ -24,7 +24,8 @@ import MoonLoader from "react-spinners/MoonLoader";
 import { connect } from "react-redux";
 import { fetchProfile } from "../../Redux";
 import { FormattedNumber, IntlProvider } from "react-intl";
-const Dashboard = ({ profileData, cardData, fetchProfile }) => {
+import { init } from "../../Redux/socket/SocketAction";
+const Dashboard = ({ profileData, cardData, fetchProfile, initSocket }) => {
   const [sidebar, setSidebar] = useState(false);
   const [spinner, setSpinner] = useState(true);
 
@@ -33,6 +34,11 @@ const Dashboard = ({ profileData, cardData, fetchProfile }) => {
   };
   // const {data: profile, ispending, error} = useFetch(`https://credio-api.herokuapp.com/api/v1/agent/user/getProfile`);
 
+  useEffect(() => {
+    initSocket();
+  }, []);
+
+  
   useEffect(() => {
     fetchProfile();
   }, []);
@@ -211,6 +217,7 @@ const mapStoreToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchProfile: () => dispatch(fetchProfile()),
+    initSocket: () => dispatch(init()),
   };
 };
 

@@ -2,13 +2,24 @@
 import * as main from "./card_engine";
 import "./CardType";
 import axios from "axios";
+
+import { sendCard } from "../socket/SocketAction";
 import {
   CONNECT_DEVICE,
   DISCONNECT_DEVICE,
   REQUEST_PIN,
   REQUEST_PIN_DONE,
+  RECIEVE_RESPONSE,
+  RECIEVE_RESPONSE_DONE,
   SEND_TLV_DATA,
 } from "./CardType";
+import {
+  SOCKET_INIT,
+  SOCKET_SEND_CARD,
+  SOCKET_RECIEVE_TRANSDATA,
+  SOCKET_SEND_CARDLESS,
+} from "../../Redux/socket/SocketType";
+import store from "../../Redux/Store";
 
 var dispatch;
 // var MPOS_SERVICE = "0000180a-0000-1000-8000-00805f9b34fb";
@@ -64,6 +75,13 @@ var qPOSServiceListenerImpl = new QPOSServiceListenerImpl();
 mService.initListener(qPOSServiceListenerImpl);
 main.setOnResult(new main.QPOSAnalyResult(qPOSServiceListenerImpl));
 
+export const cardTranxDone = () => {
+  return async (dispatch) => {
+    dispatch({
+      type: RECIEVE_RESPONSE_DONE,
+    });
+  };
+};
 QPOSServiceListenerImpl.prototype.onQposInfoResult = function (deviceInfo) {
   console.log("onQposInfoResult:" + deviceInfo);
   var str = "";
@@ -250,27 +268,42 @@ QPOSServiceListenerImpl.prototype.onRequestOnlineProcess = function (msg) {
   var str = "8A023030"; //Currently the default value,
   mService.sendOnlineProcessResult(str);
   // trasactionData.innerText = "onRequestOnlineProcess:" + "\r" + msg;
-  dispatch({
+  store.dispatch({
     type: SEND_TLV_DATA,
     payload: msg,
   });
 
-  // dispatch(transactionRequest);
-  axios
-    .post("http://localhost:8080/ups/pos/cards", {
+  store.dispatch({
+    type: SOCKET_SEND_CARD,
+    payload: {
+      tlv: store.getState().card.tlv,
+      accountType: store.getState().card.accountType,
+    },
+  });
+
+  store.dispatch(
+    sendCard({
       tlv: msg,
-      accountType: 0,
+      accountType: store.getState().card.accountType,
     })
-    .then((response) => {
-      // const transaction = response.data.transaction;
-      console.log(`this is transaction--- ${response}`);
-      // dispatch(transactionSuccess(transaction));
-    })
-    .catch((error) => {
-      console.error(error);
-      // const errorMsg = error.message;
-      // dispatch(transactionFaliure(errorMsg));
-    });
+  );
+
+  // dispatch(transactionRequest);
+  // axios
+  //   .post("http://localhost:8080/ups/pos/cards", {
+  //     tlv: msg,
+  //     accountType: store.getState().card.accountType,
+  //   })
+  //   .then((response) => {
+  //     // const transaction = response.data.transaction;
+  //     console.log(`this is transaction--- ${response}`);
+  //     // dispatch(transactionSuccess(transaction));
+  //   })
+  //   .catch((error) => {
+  //     console.error(error);
+  //     // const errorMsg = error.message;
+  //     // dispatch(transactionFaliure(errorMsg));
+  //   });
 
   //
 };
@@ -373,23 +406,24 @@ QPOSServiceListenerImpl.prototype.onFinishMifareCardResult = function (flag) {
 
 QPOSServiceListenerImpl.prototype.onReturnGetPinResult = function (value) {
   console.log("onReturnGetPinResult: " + value);
-  dispatch({
+
+  store.dispatch({
     type: REQUEST_PIN_DONE,
   });
 };
 
 QPOSServiceListenerImpl.prototype.onRequestSetPin = function () {
   console.log("onRequestSetPin: ");
-
   // dialog();
 
-  dispatch({
+  store.dispatch({
     type: REQUEST_PIN,
   });
 };
 
 export const sendPIN = (pin) => {
   console.log("Pin sent,,,, ", pin);
+
   return mService.sendPin(pin);
 };
 
@@ -558,7 +592,7 @@ export function DisConnect() {
   return async (dispatch) => {
     Connected_Device.gatt.disconnect();
     console.log("===>用户断开了连接<===");
-    dispatch({
+    store.dispatch({
       type: DISCONNECT_DEVICE,
     });
   };
@@ -569,9 +603,10 @@ export function startTrade(amount) {
   return async (dispatch) => {
     var currency = "0566"; //获取form表单中第一个元素的值
     var tractionType = "0";
+    amount = parseInt(amount) * 100;
     if (Connected) {
       main.setAmount(
-        amount,
+        `${amount}`,
         "",
         currency,
         transactionTypeConvert(tractionType)
@@ -585,7 +620,7 @@ export function startTrade(amount) {
       // mService.doInputCustomStr(CustomInputOperateType.isNumber, CustomInputDisplayType.Other, 6,displayStr,"test",amount);
     } else {
       // DiscoverDevice();
-      dispatch({
+      store.dispatch({
         type: DISCONNECT_DEVICE,
       });
       alert("No pos connected!");
@@ -722,7 +757,7 @@ function ConnectDevice(dispatch) {
         console.log("disconnect ");
         Connected = false;
         console.log("Can do start now");
-        dispatch({
+        store.dispatch({
           type: DISCONNECT_DEVICE,
         });
       });
@@ -789,7 +824,7 @@ function DiscoverService(dispatch) {
             //更新UI的信息
             if (MPOS_DATA_Ready) {
               console.log("Can do start now");
-              dispatch({
+              store. dispatch({
                 type: CONNECT_DEVICE,
               });
             } else {

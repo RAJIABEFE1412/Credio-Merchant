@@ -1,13 +1,16 @@
 import {
   SOCKET_INIT,
   SOCKET_SEND_CARD,
+  SOCKET_RECIEVE_TRANSDATA,
   SOCKET_SEND_CARDLESS,
 } from "./SocketType";
 
 const initialState = {
   loading: false,
   initated: false,
-  transaction: [],
+  transaction: {},
+
+  transactionResult: {},
   error: "",
 };
 
@@ -20,15 +23,17 @@ const transactionReducer = (state = initialState, action) => {
       };
     case SOCKET_SEND_CARD:
       return {
-        loading: false,
+        ...state,
+        loading: true,
         transaction: action.payload,
-        error: "",
       };
+    case SOCKET_RECIEVE_TRANSDATA:
+      return { ...state, loading: false, transactionResult: action.payload };
+
     case SOCKET_SEND_CARDLESS:
       return {
-        loading: false,
-        transaction: [],
-        error: action.payload,
+        ...state,
+        loading: true,
       };
     default:
       return state;

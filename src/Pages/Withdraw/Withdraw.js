@@ -5,18 +5,20 @@ import "./Withdraw.css";
 import io from "socket.io-client";
 import { connect } from "react-redux";
 import CustomModal from "../../Components/Modal/CustomModal";
+import Modal from "../../Components/Modal/Modal";
 import CardPin from "./CardPin";
 import { startTrade } from "../../Redux/Card/CardScript";
 import Navbar from "../../Components/Navbar/Navbar";
 import Sidebar from "../../Components/Sidebar/Sidebar";
 import { useState } from "react";
+import { buttonScan, init } from "../../Redux/Card/CardScript";
 // useEffect
-const socket = io.connect("https://credio-api.herokuapp.com/payment", {
-  transports: ["websocket"],
-  query: "phoneNumber=+2347049581457",
-});
+// const socket = io.connect("https://credio-api.herokuapp.com/payment", {
+//   transports: ["websocket"],
+//   query: "phoneNumber=+2347049581457",
+// });
 
-const Withdraw = ({ doTrade, cardData }) => {
+const Withdraw = ({ doTrade, cardData, cardScan }) => {
   const [sidebar, setSidebar] = useState(false);
   const [amount, setAmount] = useState("");
   const toggleSidebar = () => {
@@ -36,7 +38,7 @@ const Withdraw = ({ doTrade, cardData }) => {
   let proceedTransaction = (e) => {
     e.preventDefault();
     console.log("bring woman come house....");
-    socket.emit("cards", { tlv: cardData.tlv, accountType: 0 });
+    // socket.emit("cards", { tlv: cardData.tlv, accountType: 0 });
   };
 
   const handleAmount = (e) => {
@@ -47,7 +49,12 @@ const Withdraw = ({ doTrade, cardData }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    doTrade(amount);
+    if (!cardData.connected) {
+      init();
+      cardScan();
+    } else {
+      doTrade(amount);
+    }
   };
   return (
     <div className="withdraww">
@@ -107,6 +114,13 @@ const Withdraw = ({ doTrade, cardData }) => {
                   Child={<CardPin handleClick={proceedTransaction}></CardPin>}
                 />
               )}
+
+              {(cardData.loading || cardData.responseData) && (
+                <Modal
+                // closeModal={cardData.pinRequest}
+                // Child={<CardPin handleClick={proceedTransaction}></CardPin>}
+                />
+              )}
               {/* <div className="form-2 withdraw-form-mobile">
                                     <ProfileField
                                     label="Amount"
@@ -117,11 +131,13 @@ const Withdraw = ({ doTrade, cardData }) => {
                 {/* <Link to="/pin"> */}
                 <button
                   type="submit"
-                  value="Continue"
+                  value={
+                    !cardData.connected ? "Rescan To Continue" : "Continue"
+                  }
                   onClick={handleSubmit}
                   className="submit-2 withdraw-submit-2"
                 >
-                  Continue
+                  {!cardData.connected ? "Rescan && Continue" : "Continue"}
                 </button>
                 {/* </Link> */}
               </div>
@@ -144,6 +160,9 @@ const mapDispatchToProps = (dispatch) => {
     doTrade: (postState) => {
       console.log("got here ....... . ... ");
       dispatch(startTrade(postState));
+    },
+    cardScan: () => {
+      dispatch(buttonScan());
     },
   };
 };
