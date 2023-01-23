@@ -80,7 +80,6 @@ const ByOtherBank = ({ bankData, fetchBank, postData, nameData, reqData }) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-
     reqData({
       nameEnquiryReference: nameData.bankname.accountDetails.data.sessionId,
       debitAccountNumber,

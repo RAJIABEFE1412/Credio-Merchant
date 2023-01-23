@@ -174,9 +174,9 @@ const Login = (props) => {
                             value={country}
                             onChange={handleCountry}
                         />{" "}
-                            <div className="inputfield">
+                            <div className="inputfield loginfield">
                                 <label>Phone Number</label><br></br>
-                                <div className="inputbox2">
+                                <div className="inputbox2 inputbox-login">
                                     <input
                                         type="tel"
                                         placeholder='0903 4344 5532'
@@ -189,9 +189,9 @@ const Login = (props) => {
                                     <span className='place-mobile'>0903 4344 5532</span>
                                 </div>
                             </div>
-                            <div className="inputfield">
+                            <div className="inputfield loginfield">
                                 <label>Password</label><br></br>
-                                <div className="inputbox2">
+                                <div className="inputbox2 inputbox-login">
                                     <input
                                         type={type}
                                         placeholder='***********'
@@ -211,7 +211,7 @@ const Login = (props) => {
                                     </Link>
                                 </div>
                             </div>
-                            <div className="submit">
+                            <div className="submit submit-login">
                                 <button 
                                 type="submit"
                                 name="submit"
