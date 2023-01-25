@@ -1,5 +1,5 @@
 .withdraw-body{
-    margin-top: 100px;
+    margin-top: 2px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@
 }
 .withdraw-submit{
     width: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .withdraw-submit-2, .withdraw-submit a{
     width: 100%;
