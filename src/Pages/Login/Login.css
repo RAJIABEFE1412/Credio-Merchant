@@ -1,4 +1,4 @@
-.login, .register{
+.login, .register, .otp, .password{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -194,7 +194,7 @@
     .login, .register{
         display: grid;
         grid-template-columns: 1fr;
-        padding: 20px;
+        padding: 0px;
     }
     .login-left{
         display: none;
@@ -205,5 +205,8 @@
     .login-text{
         text-align: left;
         font-size: 11px;
+    }
+    .login-right{
+        padding: 0px;
     }
 }

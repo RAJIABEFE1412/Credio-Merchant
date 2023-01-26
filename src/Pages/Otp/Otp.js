@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-const Register = () => {
-    return ( 
-        <div className="register">
+import './Otp.css'
+import otpimage from '../../assets/image/Group 692.png'
+const Otp = () => {
+    return (
+        <div className="otp">
             <div className="login-left">
                 <p className='login-logo'>Credio Merchant</p>
                 <div className="group-lower">
@@ -20,24 +22,27 @@ const Register = () => {
             <div className="login-right">
                 <div className="login-form-section-inner">
                     <div className="welcome">
-                        <p className='login-header'>Sign up</p>
-                        <p className='login-text'>Please enter your phone number</p>
+                        <p className='login-header'>Enter OTP</p>
+                        <p className='login-text'>A 4-Digit code whas been sent to your number</p>
                     </div>
                     <div className="login-form">
+                        <div className="forget-image">
+                            <img src={otpimage}></img>
+                        </div>
                         <form>
                             <div className="inputfield">
-                                <label>Phone Number</label><br></br>
+                                {/* <label>OTP</label><br></br> */}
                                 <div className="inputbox2 inputbox-login">
                                     <input
                                         type="tel"
-                                        placeholder='0903 4344 5532'
+                                        placeholder='Enter OTP'
                                         required
                                     >
                                     </input>
-                                    <span className="place-mobile">0903 4344 5532</span>
+                                    <span className="place-mobile">Enter OTP</span>
                                 </div>
                             </div>
-                            <Link to="/otp">
+                            <Link to="/password">
                                 <div className="submit submit-login">
                                     <input 
                                     type="submit"
@@ -51,7 +56,7 @@ const Register = () => {
                 </div>
             </div>
         </div>
-     );
+    );
 }
  
-export default Register;
+export default Otp;

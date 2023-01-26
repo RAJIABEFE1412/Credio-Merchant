@@ -220,7 +220,7 @@ const ByOtherBank = ({ bankData, fetchBank, postData, nameData, reqData }) => {
                       onBlur={handleComment}
                       onChange={handleComment}
                     ></textarea>
-                    <span className="place-mobile">Make a Comment</span>
+                    <span className=" ">Make a Comment</span>
                   </div>
                 </div>
               </div>

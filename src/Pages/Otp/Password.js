@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
-const Register = () => {
+import passimage from '../../assets/image/amico.png';
+import { Link } from 'react-router-dom';
+const Password = () => {
     return ( 
-        <div className="register">
+        <div className="password">
             <div className="login-left">
                 <p className='login-logo'>Credio Merchant</p>
                 <div className="group-lower">
@@ -20,24 +21,39 @@ const Register = () => {
             <div className="login-right">
                 <div className="login-form-section-inner">
                     <div className="welcome">
-                        <p className='login-header'>Sign up</p>
-                        <p className='login-text'>Please enter your phone number</p>
+                        <p className='login-header'>Set Password</p>
+                        <p className='login-text'>Enter the password you want?</p>
                     </div>
                     <div className="login-form">
+                        <div className="forget-image">
+                            <img src={passimage}></img>
+                        </div>
                         <form>
                             <div className="inputfield">
-                                <label>Phone Number</label><br></br>
+                                {/* <label>OTP</label><br></br> */}
                                 <div className="inputbox2 inputbox-login">
                                     <input
-                                        type="tel"
-                                        placeholder='0903 4344 5532'
+                                        type="password"
+                                        placeholder='Enter Password'
                                         required
                                     >
                                     </input>
-                                    <span className="place-mobile">0903 4344 5532</span>
+                                    <span className="place-mobile">Enter Password</span>
                                 </div>
                             </div>
-                            <Link to="/otp">
+                            <div className="inputfield">
+                                {/* <label>OTP</label><br></br> */}
+                                <div className="inputbox2 inputbox-login">
+                                    <input
+                                        type="password"
+                                        placeholder='Confirm New Password'
+                                        required
+                                    >
+                                    </input>
+                                    <span className="place-mobile">Confirm New Password</span>
+                                </div>
+                            </div>
+                            <Link to="/">
                                 <div className="submit submit-login">
                                     <input 
                                     type="submit"
@@ -51,7 +67,7 @@ const Register = () => {
                 </div>
             </div>
         </div>
-     );
+    );
 }
  
-export default Register;
+export default Password;

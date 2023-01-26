@@ -14,7 +14,6 @@ import SavingPreview from './Pages/Savings/SavingPreview';
 import Withdraw from './Pages/Withdraw/Withdraw';
 import CardPin from './Pages/Withdraw/CardPin';
 import Account from './Pages/Account/Account';
-import Otp from './Pages/Account/Otp';
 import CheckingOtp from './Pages/Account/CheckingOtp';
 import AccountDetails from './Pages/Account/AccountDetails';
 import Transaction from './Pages/Transaction/Transaction';
@@ -26,6 +25,8 @@ import { FaBars } from 'react-icons/fa';
 import { useState } from 'react';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Registration/Register';
+import Otp from './Pages/Otp/Otp';
+import Password from './Pages/Otp/Password';
 
 function App() {
   return (
@@ -36,6 +37,8 @@ function App() {
               {/* PUBLIC ROUTES */}
               <Route exact path='/' element={<Login/>}></Route>
               <Route exact path='/signup' element={<Register/>}></Route>
+              <Route exact path='/otp' element={<Otp/>}></Route>
+              <Route exact path='/password' element={<Password/>}></Route>
               {/* PRIVATE ROUTES */}
               <Route exact path='/dashboard' element={<Dashboard/>}></Route>
               {/* <Route exact path='/deposit' element={<Deposit/>}></Route> */}
