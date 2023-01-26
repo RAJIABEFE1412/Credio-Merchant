@@ -1,0 +1,151 @@
+.modal-background{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 200, 200, 0.485);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+.custom-modal-container{
+    width: 50%;
+    height: 60%;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;
+}
+.transaction-success{
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+}
+.transaction-through{
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+}
+.transaction-participants{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px dashed #ACACAC;
+}
+/* .transaction-center{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: #323232;
+} */
+.transactions-done{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.transactions-done-inner{
+    width: 90%;
+}
+.trans-head{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #383838;
+}
+.trans-body{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #ACACAC;
+    margin-top: 3px;
+}
+.trans-body-2{
+    margin-top: 15px;
+}
+.from-to, .amount-commission{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.from,.to,.amount,.commission{
+    width: 45%;
+    text-align: left;
+}
+.to,.commission{
+    text-align: right;
+}
+.transaction-back{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.back-to-payment{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    color: #FFFFFF;
+    width: 80%;
+    height: 65px;
+    background: #B11226;
+    border: none;
+    border-radius: 9px;
+}
+@media (Max-width:1270px) {
+    .modal-background{
+        height: 130vh;
+    }
+    .modal-container{
+        width: 30%;
+        height: 90%;
+        border-radius: 12px;
+        background-color: #FFFFFF;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 25px;
+    }
+}
+@media (Max-width:1030px) {
+    .modal-background{
+        height: 150vh;
+    }
+    .modal-container{
+        width: 30%;
+        height: 90%;
+        border-radius: 12px;
+        background-color: #FFFFFF;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 25px;
+    }
+}
+@media (Max-width: 500px) {
+    .modal-container{
+        width: 90%;
+    }
+}
